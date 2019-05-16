@@ -11,8 +11,9 @@ import { media, cover, Container } from '../style/theme';
 const screens = ['about', 'portfolio', 'contact', 'cv'];
 
 const meta = {
-  title: 'fatih telis | frontend developer based in Turkey',
-  description: 'personal website of turkey based frontend developer, fatih telis',
+  title: 'fatih telis | frontend developer',
+  description:
+    'personal website of fatih telis including info, portfolio, contact information and cv',
   ogImage: '/static/og.jpg',
 };
 
