@@ -4,7 +4,7 @@ import Normalize from '../style/normalize';
 
 const Layout = ({ children, meta }) => (
   <>
-    <Head title={meta.title || ''} />
+    <Head {...meta} />
     <Normalize />
     <GlobalStyle />
     {children}

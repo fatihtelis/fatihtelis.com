@@ -10,10 +10,16 @@ import { media, cover, Container } from '../style/theme';
 
 const screens = ['about', 'portfolio', 'contact', 'cv'];
 
+const meta = {
+  title: 'fatih telis | frontend developer based in Turkey',
+  description: 'personal website of turkey based frontend developer, fatih telis',
+  ogImage: '/static/og.jpg',
+};
+
 const Home = () => {
   const [activeScreen, setActiveScreen] = useState(null);
   return (
-    <Layout meta={{ title: 'fatih telis | frontend developer based in Turkey' }}>
+    <Layout meta={meta}>
       <Navigation className={cn({ light: activeScreen })}>
         <Container>
           <Logo className="logo" flexDirection="column">
