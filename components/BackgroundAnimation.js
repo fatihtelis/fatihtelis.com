@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import * as THREE from 'three';
-import OrbitControls from 'three-orbitcontrols';
+// import OrbitControls from 'three-orbitcontrols';
 
 const Outer = styled.div`
   position: fixed;
@@ -12,11 +12,10 @@ const Outer = styled.div`
 `;
 
 const colors = {
-  cube: new THREE.Color(0x6c5ce7),
-  sphere: new THREE.Color(0x0c084c),
-  prism: new THREE.Color(0xff0b55),
-  earth: new THREE.Color(0xc2b7cc),
-  sky: new THREE.Color(0x23b3f0),
+  cube: new THREE.Color(0x15cda8),
+  sphere: new THREE.Color(0x1b00ff),
+  prism: new THREE.Color(0xe41749),
+  sky: new THREE.Color(0x000000),
   ambient: new THREE.Color(0xffffff),
   spotlight: new THREE.Color(0xffffff),
   directional: {
@@ -69,15 +68,15 @@ class BackgroundAnimation extends React.Component {
     const ambient = new THREE.AmbientLight(colors.ambient, 0.75);
     scene.add(ambient);
 
-    // // Directional Light - Left
-    // const directLightLeft = new THREE.DirectionalLight(colors.directional.left, 0.35);
-    // directLightLeft.position.set(-20, 40, 0);
-    // scene.add(directLightLeft);
-    //
-    // // Directional Light - Right
-    // const directLightRight = new THREE.DirectionalLight(colors.directional.right, 0.65);
-    // directLightRight.position.set(20, 40, 0);
-    // scene.add(directLightRight);
+    // Directional Light - Left
+    const directLightLeft = new THREE.DirectionalLight(colors.directional.left, 0.5);
+    directLightLeft.position.set(-20, 40, 0);
+    scene.add(directLightLeft);
+
+    // Directional Light - Right
+    const directLightRight = new THREE.DirectionalLight(colors.directional.right, 0.5);
+    directLightRight.position.set(20, 40, 0);
+    scene.add(directLightRight);
 
     // Spotlight
     const spotlight = new THREE.SpotLight(colors.spotlight, 0.5);
@@ -87,9 +86,8 @@ class BackgroundAnimation extends React.Component {
 
     // Earth
     const earthGeometry = new THREE.PlaneGeometry(2000, 2000);
-    const earthMaterial = new THREE.MeshStandardMaterial({
-      color: colors.earth,
-    });
+    const earthMaterial = new THREE.ShadowMaterial();
+    earthMaterial.opacity = 0.05;
     const earth = new THREE.Mesh(earthGeometry, earthMaterial);
     earth.position.set(0, 0, 0);
     earth.rotation.x = -Math.PI * 0.5;
