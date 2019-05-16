@@ -66,6 +66,7 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
     .about {
       position: relative;
       width: 100%;
+      max-width: 1000px;
       &::before {
         content: '';
         position: absolute;
@@ -86,7 +87,7 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             position: absolute;
             right: 100%;
             top: 50%;
-            width: 32px;
+            width: 35px;
             height: 1px;
             background-color: white;
           }
@@ -95,8 +96,8 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             position: absolute;
             left: -40px;
             top: 50%;
-            width: 16px;
-            height: 16px;
+            width: 10px;
+            height: 10px;
             background-color: white;
             border-radius: 50%;
             transform: translate(-50%, -50%);
@@ -109,7 +110,7 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             position: absolute;
             left: 100%;
             top: 50%;
-            width: 32px;
+            width: 35px;
             height: 1px;
             background-color: white;
           }
@@ -118,8 +119,8 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             position: absolute;
             right: -40px;
             top: 50%;
-            width: 16px;
-            height: 16px;
+            width: 10px;
+            height: 10px;
             background-color: white;
             border-radius: 50%;
             transform: translate(50%, -50%);

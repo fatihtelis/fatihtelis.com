@@ -12,9 +12,9 @@ const Outer = styled.div`
 `;
 
 const colors = {
-  cube: new THREE.Color(0x15cda8),
+  cube: new THREE.Color(0xf6c523),
   sphere: new THREE.Color(0x1b00ff),
-  prism: new THREE.Color(0xe41749),
+  prism: new THREE.Color(0xc82121),
   sky: new THREE.Color(0x000000),
   ambient: new THREE.Color(0xffffff),
   spotlight: new THREE.Color(0xffffff),

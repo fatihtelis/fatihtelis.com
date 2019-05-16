@@ -3,8 +3,16 @@ import { Flex, Box } from '@rebass/grid';
 import libs from '../static/data/libs.json';
 import { colors, media } from '../style/theme';
 
-const PortfolioImage = ({ data: { images } }) => <ImageBg images={images} />;
-
+const PortfolioImage = ({ data: { images } }) => (
+  <>
+    <ImageBg data-background={images.desktop} className="swiper-lazy desktop">
+      <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
+    </ImageBg>
+    <ImageBg data-background={images.mobile} className="swiper-lazy mobile">
+      <div className="swiper-lazy-preloader swiper-lazy-preloader-white" />
+    </ImageBg>
+  </>
+);
 const PortfolioInfo = ({
   data: {
     title, description, link, technologies, screenshots,
@@ -25,39 +33,54 @@ const PortfolioInfo = ({
     <Flex className="detail-wrapper" flexDirection="column">
       <Flex className="detail" alignItems="center">
         <Box className="detail-title">SCREENSHOTS</Box>
-        {screenshots.map((item, index) => (
-          <a href={item} target="_blank" rel="noopener noreferrer" key={item}>
-            {index + 1}
-            {' '}
-            <span className="bx bx-link-external" />
-          </a>
-        ))}
+        <Flex alignItems="center">
+          {screenshots.map((item, index) => (
+            <a href={item} target="_blank" rel="noopener noreferrer" key={item}>
+              {index + 1}
+              {' '}
+              <span className="bx bx-link-external" />
+            </a>
+          ))}
+        </Flex>
       </Flex>
       <Flex className="detail" alignItems="center">
         <Box className="detail-title">FRAMEWORKS/LIBS USED</Box>
-        {technologies.map(item => (
-          <a
-            href={libs[item].website}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={item}
-            key={item}
-          >
-            <img src={libs[item].logo} height="20" alt={item} />
-          </a>
-        ))}
+        <Flex alignItems="center">
+          {technologies.map(item => (
+            <a
+              href={libs[item].website}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={item}
+              key={item}
+            >
+              <img src={libs[item].logo} height="20" alt={item} />
+            </a>
+          ))}
+        </Flex>
       </Flex>
     </Flex>
   </Info>
 );
 
 const ImageBg = styled.div`
-  background: ${props => `url(${props.images.desktop}) center/cover no-repeat`};
   width: 100%;
   padding-top: 50%;
-  ${media.phone`
-    background: ${props => `url(${props.images.mobile}) center/cover no-repeat`};
-  `};
+  background-position: center;
+  background-repeat: no-no-repeat;
+  background-size: cover;
+  background-color: black;
+  &.desktop {
+    ${media.phone`
+      display:none;
+    `};
+  }
+  &.mobile {
+    display: none;
+    ${media.phone`
+      display: block;
+    `};
+  }
 `;
 
 const Info = styled(Flex)`
@@ -71,12 +94,26 @@ const Info = styled(Flex)`
   padding: 30px;
   color: ${colors.font};
   border-top: 1px solid #eee;
+  ${media.tablet`
+    width: 100%;
+  `}
+  ${media.phone`
+    height: 225px;
+    padding: 20px;
+  `};
   .project-header {
     width: 100%;
     padding-bottom: 5px;
+    ${media.phone`
+      flex-direction: column;
+      border-bottom: 1px solid #eee;
+    `};
     .project-title {
       font-size: 20px;
       font-weight: 700;
+      ${media.phone`
+        font-size: 18px;
+      `};
     }
     a,
     a:visited,
@@ -85,18 +122,32 @@ const Info = styled(Flex)`
       font-size: 12px;
       color: #39318e;
       text-decoration: none;
+      ${media.phone`
+        margin: 10px 0;
+      `};
     }
   }
   .description {
     padding: 30px 0;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    ${media.phone`
+      display: none;
+    `};
   }
   .detail {
     margin-top: 20px;
+    ${media.phone`
+      flex-direction: column;
+    `};
     &-title {
       color: #999;
       font-size: 12px;
+      ${media.phone`
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      `};
     }
     a,
     a:visited,
@@ -106,6 +157,9 @@ const Info = styled(Flex)`
       text-decoration: none;
       display: flex;
       align-items: flex-start;
+      ${media.phone`
+        margin: 0 7.5px;
+      `};
       .bx {
         font-size: 12px;
         margin-left: 2px;

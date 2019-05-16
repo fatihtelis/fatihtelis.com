@@ -4,12 +4,16 @@ import { Flex, Box } from '@rebass/grid';
 import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
 import PortfolioItem from '../../../components/PortfolioItem';
 import portfolio from './portfolio.json';
-import { container, cover } from '../../../style/theme';
+import { container, cover, media } from '../../../style/theme';
 
 const imageSwiperParams = {
   containerClass: 'image-swiper',
   init: false,
   loop: true,
+  lazy: {
+    loadOnTransitionStart: true,
+  },
+  watchSlidesVisibility: true,
   loopAdditionalSlides: 3,
   speed: 700,
   slidesPerView: 1.6,
@@ -106,13 +110,9 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
   color: white;
   .screen {
     ${container};
-    padding: 40px 0;
     .image-swiper,
     .info-swiper {
       overflow: hidden;
-    }
-    .image-swiper {
-      margin-top: 40px;
     }
     .info-swiper {
       padding-bottom: 50px;
@@ -132,9 +132,15 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
       }
       .prev {
         left: 18.75%;
+        ${media.tablet`
+          left: 0;
+        `};
       }
       .next {
         right: 18.75%;
+        ${media.tablet`
+          right: 0;
+        `};
       }
     }
   }
