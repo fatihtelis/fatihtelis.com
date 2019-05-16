@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
 import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
+import Section from '../../../components/Section';
 import PortfolioItem from '../../../components/PortfolioItem';
 import portfolio from './portfolio.json';
-import { container, cover, media } from '../../../style/theme';
+import { container, media } from '../../../style/theme';
 
 const imageSwiperParams = {
   containerClass: 'image-swiper',
@@ -62,8 +63,8 @@ const Portfolio = ({ active }) => {
   }, [imageSwiper, infoSwiper]);
 
   return (
-    <Outer active={active}>
-      <Flex className="screen" flexDirection="column" justifyContent="center">
+    <Section active={active}>
+      <Screen className="screen" flexDirection="column" justifyContent="center">
         <Swiper getSwiper={updateImageSwiper} {...imageSwiperParams}>
           {portfolio.map(item => (
             <div className="slide" key={`${item.images.desktop}-${item.images.mobile}`}>
@@ -97,51 +98,44 @@ const Portfolio = ({ active }) => {
             </div>
           ))}
         </Swiper>
-      </Flex>
-    </Outer>
+      </Screen>
+    </Section>
   );
 };
 
-const Outer = styled(Flex).attrs({ as: 'section' })`
-  ${cover()};
-  opacity: ${props => (props.active ? '1' : '0')};
-  pointer-events: ${props => (props.active ? 'visible' : 'none')};
-  transition: ${props => (props.active ? '1s 0.4s' : '0.1s')};
-  color: white;
-  .screen {
-    ${container};
-    .image-swiper,
-    .info-swiper {
-      overflow: hidden;
-    }
-    .info-swiper {
-      padding-bottom: 50px;
-      position: relative;
-      .prev,
-      .next {
-        position: absolute;
-        bottom: 20px;
-        font-size: 14px;
-        line-height: 1;
-        letter-spacing: 2px;
-        font-weight: 300;
-        cursor: pointer;
-        .bx {
-          font-size: 12px;
-        }
+const Screen = styled(Flex)`
+  ${container};
+  .image-swiper,
+  .info-swiper {
+    overflow: hidden;
+  }
+  .info-swiper {
+    padding-bottom: 50px;
+    position: relative;
+    .prev,
+    .next {
+      position: absolute;
+      bottom: 20px;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 2px;
+      font-weight: 300;
+      cursor: pointer;
+      .bx {
+        font-size: 12px;
       }
-      .prev {
-        left: 18.75%;
-        ${media.tablet`
+    }
+    .prev {
+      left: 18.75%;
+      ${media.tablet`
           left: 0;
         `};
-      }
-      .next {
-        right: 18.75%;
-        ${media.tablet`
+    }
+    .next {
+      right: 18.75%;
+      ${media.tablet`
           right: 0;
         `};
-      }
     }
   }
 `;

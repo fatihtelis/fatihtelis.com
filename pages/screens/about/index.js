@@ -2,9 +2,10 @@ import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import { TimelineMax, Power1 } from 'gsap';
+import Section from '../../../components/Section';
 import AboutItem from '../../../components/AboutItem';
 import about from './about.json';
-import { container, cover, media } from '../../../style/theme';
+import { container, media } from '../../../style/theme';
 
 let animation;
 const About = ({ active }) => {
@@ -36,125 +37,117 @@ const About = ({ active }) => {
   }, [active]);
 
   return (
-    <Outer active={active}>
-      <Flex className="screen" flexDirection="column" alignItems="center">
+    <Section active={active}>
+      <Screen flexDirection="column" alignItems="center">
         <h2>Who Am I?</h2>
         <Flex className="about" flexWrap="wrap">
           {about.map((item, index) => (
             <AboutItem innerRef={items[index]} data={item} key={item.text} />
           ))}
         </Flex>
-      </Flex>
-    </Outer>
+      </Screen>
+    </Section>
   );
 };
 
-const Outer = styled(Flex).attrs({ as: 'section' })`
-  ${cover()};
-  opacity: ${props => (props.active ? '1' : '0')};
-  pointer-events: ${props => (props.active ? 'visible' : 'none')};
-  transition: ${props => (props.active ? '1s 0.4s' : '0.1s')};
-  color: white;
-  .screen {
-    ${container};
-    padding: 40px 0;
-    h2 {
-      font-size: 36px;
-      text-align: center;
-      margin: 0px auto 40px;
-      ${media.tablet`
+const Screen = styled(Flex)`
+  ${container};
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 0px auto 40px;
+    ${media.tablet`
         margin: 0px auto 20px;
       `};
-    }
-    .about {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      &::before {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: calc(100% + 40px);
-        left: 50%;
-        border-left: 1px dashed white;
-        ${media.tablet`
+  }
+  .about {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: calc(100% + 40px);
+      left: 50%;
+      border-left: 1px dashed white;
+      ${media.tablet`
           left: 0;
         `};
-      }
-      .about-item {
-        width: calc(50% - 40px);
-        position: relative;
-        opacity: 0;
-        bottom: -100px;
-        ${media.tablet`
+    }
+    .about-item {
+      width: calc(50% - 40px);
+      position: relative;
+      opacity: 0;
+      bottom: -100px;
+      ${media.tablet`
           width: 100%;
         `};
-        &:nth-child(2n) {
-          margin: 100px 0 0 40px;
-          ${media.tablet`
+      &:nth-child(2n) {
+        margin: 100px 0 0 40px;
+        ${media.tablet`
             margin: 20px 0 0 20px;
           `};
-          &:before {
-            content: '';
-            position: absolute;
-            right: 100%;
-            top: 50%;
-            width: 35px;
-            height: 1px;
-            background-color: white;
-            ${media.tablet`
+        &:before {
+          content: '';
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          width: 35px;
+          height: 1px;
+          background-color: white;
+          ${media.tablet`
               width: 15px;
             `};
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            left: -40px;
-            top: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            ${media.tablet`
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: -40px;
+          top: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          ${media.tablet`
               left: -20px;
             `};
-          }
         }
-        &:nth-child(2n + 1) {
-          margin: 0 40px 0 0;
-          ${media.tablet`
+      }
+      &:nth-child(2n + 1) {
+        margin: 0 40px 0 0;
+        ${media.tablet`
             margin: 20px 0 0 20px;
           `};
-          &:before {
-            content: '';
-            position: absolute;
-            left: 100%;
-            top: 50%;
-            width: 35px;
-            height: 1px;
-            background-color: white;
-            ${media.tablet`
+        &:before {
+          content: '';
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          width: 35px;
+          height: 1px;
+          background-color: white;
+          ${media.tablet`
               width: 15px;
               right: 100%;
               left: unset;
             `};
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            right: -40px;
-            top: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            transform: translate(50%, -50%);
-            ${media.tablet`
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          right: -40px;
+          top: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          border-radius: 50%;
+          transform: translate(50%, -50%);
+          ${media.tablet`
               left: -30px;
               right: unset;
             `};
-          }
         }
       }
     }

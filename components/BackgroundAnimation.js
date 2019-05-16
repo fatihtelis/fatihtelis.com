@@ -28,6 +28,7 @@ const colors = {
 class BackgroundAnimation extends React.Component {
   state = {
     activeScreen: this.props.activeScreen,
+    doAnimate: 0,
   };
 
   componentDidMount() {
@@ -142,21 +143,26 @@ class BackgroundAnimation extends React.Component {
     // Orbit Controls
     // const controls = new OrbitControls(camera, this.canvas);
 
-    const renderCanvas = () => {
-      const { activeScreen } = this.state;
+    const renderCanvas = async () => {
+      const catalyzer = 2;
+      const { activeScreen, doAnimate } = this.state;
       requestAnimationFrame(renderCanvas);
+      await this.setState({ doAnimate: doAnimate + 1 });
+      if (doAnimate % catalyzer !== 0) {
+        return;
+      }
 
-      cube.rotation.y += 0.01;
-      sphere.rotation.y += 0.01;
-      prism.rotation.y += 0.01;
+      cube.rotation.y += 0.01 * catalyzer;
+      sphere.rotation.y += 0.01 * catalyzer;
+      prism.rotation.y += 0.01 * catalyzer;
 
       switch (activeScreen) {
         case 'about':
           if (cube.position.z < 21) {
-            cube.position.x += 0.36;
-            cube.position.z += 0.75;
-            cube.rotation.x -= 0.15;
-            cube.rotation.z += 0.1;
+            cube.position.x += 0.36 * catalyzer;
+            cube.position.z += 0.75 * catalyzer;
+            cube.rotation.x -= 0.15 * catalyzer;
+            cube.rotation.z += 0.1 * catalyzer;
           } else {
             cube.rotation.x = 0;
             cube.rotation.y = 0;
@@ -165,10 +171,10 @@ class BackgroundAnimation extends React.Component {
           break;
         case 'portfolio':
           if (sphere.position.z < 21) {
-            sphere.position.y -= 0.05;
-            sphere.position.z += 0.75;
-            sphere.rotation.x -= 0.15;
-            sphere.rotation.z += 0.1;
+            sphere.position.y -= 0.05 * catalyzer;
+            sphere.position.z += 0.75 * catalyzer;
+            sphere.rotation.x -= 0.15 * catalyzer;
+            sphere.rotation.z += 0.1 * catalyzer;
           } else {
             sphere.rotation.x = 0;
             sphere.rotation.y = 0;
@@ -177,10 +183,10 @@ class BackgroundAnimation extends React.Component {
           break;
         case 'contact':
           if (prism.position.z < 21) {
-            prism.position.x -= 0.35;
-            prism.position.y -= 0.04;
-            prism.position.z += 0.75;
-            prism.rotation.x -= 0.05;
+            prism.position.x -= 0.35 * catalyzer;
+            prism.position.y -= 0.04 * catalyzer;
+            prism.position.z += 0.75 * catalyzer;
+            prism.rotation.x -= 0.05 * catalyzer;
           } else {
             prism.rotation.x += 0;
             prism.rotation.y = 0;
@@ -188,26 +194,26 @@ class BackgroundAnimation extends React.Component {
           break;
         case 'cv':
           if (camera.rotation.x < Math.PI / 2) {
-            camera.rotation.x += 0.05;
+            camera.rotation.x += 0.05 * catalyzer;
           }
           break;
         default:
           if (cube.position.z > 0) {
-            cube.position.x -= 0.48;
-            cube.position.z -= 1;
+            cube.position.x -= 0.48 * catalyzer;
+            cube.position.z -= 1 * catalyzer;
           }
           if (sphere.position.z > 0) {
-            sphere.position.y += 0.06666666;
-            sphere.position.z -= 1;
+            sphere.position.y += 0.06666666 * catalyzer;
+            sphere.position.z -= 1 * catalyzer;
           }
           if (prism.position.z > 0) {
-            prism.position.x += 0.46666666;
-            prism.position.y += 0.05333333;
-            prism.position.z -= 1;
-            prism.rotation.x += 0.06666666;
+            prism.position.x += 0.46666666 * catalyzer;
+            prism.position.y += 0.05333333 * catalyzer;
+            prism.position.z -= 1 * catalyzer;
+            prism.rotation.x += 0.06666666 * catalyzer;
           }
           if (camera.rotation.x > 0) {
-            camera.rotation.x -= 0.1;
+            camera.rotation.x -= 0.1 * catalyzer;
           }
           break;
       }

@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import { TimelineMax, Elastic } from 'gsap';
+import Section from '../../../components/Section';
 import contact from './contact.json';
-import { container, cover } from '../../../style/theme';
+import { container } from '../../../style/theme';
 
 let animation;
 const Contact = ({ active }) => {
@@ -35,8 +36,8 @@ const Contact = ({ active }) => {
   }, [active]);
 
   return (
-    <Outer active={active}>
-      <Flex className="screen" flexDirection="column" alignItems="center">
+    <Section active={active}>
+      <Screen flexDirection="column" alignItems="center">
         <h2>You can contact with me from...</h2>
         <Flex justifyContent="center" alignItems="center">
           {contact.map((item, index) => (
@@ -51,34 +52,27 @@ const Contact = ({ active }) => {
             </a>
           ))}
         </Flex>
-      </Flex>
-    </Outer>
+      </Screen>
+    </Section>
   );
 };
 
-const Outer = styled(Flex).attrs({ as: 'section' })`
-  ${cover()};
-  opacity: ${props => (props.active ? '1' : '0')};
-  pointer-events: ${props => (props.active ? 'visible' : 'none')};
-  transition: ${props => (props.active ? '1s 0.4s' : '0.1s')};
-  color: white;
-  .screen {
-    ${container};
-    padding: 40px 0;
-    h2 {
-      font-weight: 700;
-      margin-bottom: 15px;
-      width: 100%;
-      text-align: center;
-    }
-    a {
-      position: relative;
-      top: 40px;
-      opacity: 0;
-      font-size: 36px;
-      color: white;
-      margin: 0 10px;
-    }
+const Screen = styled(Flex)`
+  ${container};
+  padding: 40px 0;
+  h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  a {
+    position: relative;
+    top: 40px;
+    opacity: 0;
+    font-size: 36px;
+    color: white;
+    margin: 0 10px;
   }
 `;
 
