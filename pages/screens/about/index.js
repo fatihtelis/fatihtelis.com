@@ -4,7 +4,7 @@ import { Flex } from '@rebass/grid';
 import { TimelineMax, Power1 } from 'gsap';
 import AboutItem from '../../../components/AboutItem';
 import about from './about.json';
-import { container, cover } from '../../../style/theme';
+import { container, cover, media } from '../../../style/theme';
 
 let animation;
 const About = ({ active }) => {
@@ -62,6 +62,9 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
       font-size: 36px;
       text-align: center;
       margin: 0px auto 40px;
+      ${media.tablet`
+        margin: 0px auto 20px;
+      `};
     }
     .about {
       position: relative;
@@ -74,14 +77,23 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
         height: calc(100% + 40px);
         left: 50%;
         border-left: 1px dashed white;
+        ${media.tablet`
+          left: 0;
+        `};
       }
       .about-item {
         width: calc(50% - 40px);
         position: relative;
         opacity: 0;
         bottom: -100px;
+        ${media.tablet`
+          width: 100%;
+        `};
         &:nth-child(2n) {
           margin: 100px 0 0 40px;
+          ${media.tablet`
+            margin: 20px 0 0 20px;
+          `};
           &:before {
             content: '';
             position: absolute;
@@ -90,6 +102,9 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             width: 35px;
             height: 1px;
             background-color: white;
+            ${media.tablet`
+              width: 15px;
+            `};
           }
           &::after {
             content: '';
@@ -101,10 +116,16 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             background-color: white;
             border-radius: 50%;
             transform: translate(-50%, -50%);
+            ${media.tablet`
+              left: -20px;
+            `};
           }
         }
         &:nth-child(2n + 1) {
           margin: 0 40px 0 0;
+          ${media.tablet`
+            margin: 20px 0 0 20px;
+          `};
           &:before {
             content: '';
             position: absolute;
@@ -113,6 +134,11 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             width: 35px;
             height: 1px;
             background-color: white;
+            ${media.tablet`
+              width: 15px;
+              right: 100%;
+              left: unset;
+            `};
           }
           &::after {
             content: '';
@@ -124,6 +150,10 @@ const Outer = styled(Flex).attrs({ as: 'section' })`
             background-color: white;
             border-radius: 50%;
             transform: translate(50%, -50%);
+            ${media.tablet`
+              left: -30px;
+              right: unset;
+            `};
           }
         }
       }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
-import { colors } from '../style/theme';
+import { colors, media } from '../style/theme';
 
 const AboutItem = ({ innerRef, data: { icon, text } }) => (
   <Outer ref={innerRef} className="about-item" alignItems="center">
@@ -14,8 +14,14 @@ const Outer = styled(Flex)`
   border-radius: 4px;
   height: 100px;
   color: ${colors.font};
+  ${media.tablet`
+    height: auto;
+  `};
   .text {
     padding: 20px;
+    ${media.tablet`
+      padding: 15px 20px;
+    `};
   }
   .bx {
     width: 100px;
@@ -25,6 +31,13 @@ const Outer = styled(Flex)`
     border-right: 1px solid #eee;
     font-size: 42px;
     text-align: center;
+    ${media.tablet`
+      height: auto;
+      line-height: auto;
+      width: 60px;
+      min-width: 60px;
+      font-size: 36px;
+    `};
   }
 `;
 
