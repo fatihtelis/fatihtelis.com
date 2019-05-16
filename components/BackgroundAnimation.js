@@ -69,15 +69,15 @@ class BackgroundAnimation extends React.Component {
     const ambient = new THREE.AmbientLight(colors.ambient, 0.75);
     scene.add(ambient);
 
-    // Directional Light - Left
-    const directLightLeft = new THREE.DirectionalLight(colors.directional.left, 0.35);
-    directLightLeft.position.set(-20, 40, 0);
-    scene.add(directLightLeft);
-
-    // Directional Light - Right
-    const directLightRight = new THREE.DirectionalLight(colors.directional.right, 0.65);
-    directLightRight.position.set(20, 40, 0);
-    scene.add(directLightRight);
+    // // Directional Light - Left
+    // const directLightLeft = new THREE.DirectionalLight(colors.directional.left, 0.35);
+    // directLightLeft.position.set(-20, 40, 0);
+    // scene.add(directLightLeft);
+    //
+    // // Directional Light - Right
+    // const directLightRight = new THREE.DirectionalLight(colors.directional.right, 0.65);
+    // directLightRight.position.set(20, 40, 0);
+    // scene.add(directLightRight);
 
     // Spotlight
     const spotlight = new THREE.SpotLight(colors.spotlight, 0.5);
@@ -89,8 +89,6 @@ class BackgroundAnimation extends React.Component {
     const earthGeometry = new THREE.PlaneGeometry(2000, 2000);
     const earthMaterial = new THREE.MeshStandardMaterial({
       color: colors.earth,
-      dithering: true,
-      side: THREE.DoubleSide,
     });
     const earth = new THREE.Mesh(earthGeometry, earthMaterial);
     earth.position.set(0, 0, 0);
@@ -103,7 +101,6 @@ class BackgroundAnimation extends React.Component {
     sky.position.set(0, 50, 0);
     sky.material = new THREE.MeshBasicMaterial({
       color: colors.sky,
-      dithering: true,
       side: THREE.DoubleSide,
     });
     scene.add(sky);
@@ -118,7 +115,7 @@ class BackgroundAnimation extends React.Component {
     cube.position.x = -10;
     cube.position.y = 6.5;
     cube.rotation.y = Math.PI / 4;
-    // cube.castShadow = true;
+    cube.castShadow = true;
     scene.add(cube);
 
     // Sphere
@@ -129,7 +126,7 @@ class BackgroundAnimation extends React.Component {
 
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     sphere.position.y = 6.5;
-    // sphere.castShadow = true;
+    sphere.castShadow = true;
     scene.add(sphere);
 
     // Prism
@@ -141,7 +138,7 @@ class BackgroundAnimation extends React.Component {
     const prism = new THREE.Mesh(prismGeometry, prismMaterial);
     prism.position.x = 10;
     prism.position.y = 6.5;
-    // prism.castShadow = true;
+    prism.castShadow = true;
     scene.add(prism);
 
     // Orbit Controls
@@ -151,9 +148,9 @@ class BackgroundAnimation extends React.Component {
       const { activeScreen } = this.state;
       requestAnimationFrame(renderCanvas);
 
-      cube.rotation.y += 0.015;
-      sphere.rotation.y += 0.015;
-      prism.rotation.y += 0.015;
+      cube.rotation.y += 0.01;
+      sphere.rotation.y += 0.01;
+      prism.rotation.y += 0.01;
 
       switch (activeScreen) {
         case 'about':
