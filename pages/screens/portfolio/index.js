@@ -62,7 +62,7 @@ const Portfolio = ({ active }) => {
       <Flex className="screen" flexDirection="column" justifyContent="center">
         <Swiper getSwiper={updateImageSwiper} {...imageSwiperParams}>
           {portfolio.map(item => (
-            <div className="slide" key={item.image}>
+            <div className="slide" key={`${item.images.desktop}-${item.images.mobile}`}>
               <PortfolioItem.Image data={item} />
             </div>
           ))}

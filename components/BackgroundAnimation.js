@@ -118,18 +118,18 @@ class BackgroundAnimation extends React.Component {
     cube.position.x = -10;
     cube.position.y = 6.5;
     cube.rotation.y = Math.PI / 4;
-    cube.castShadow = true;
+    // cube.castShadow = true;
     scene.add(cube);
 
     // Sphere
-    const sphereGeometry = new THREE.DodecahedronBufferGeometry(3, 1);
+    const sphereGeometry = new THREE.SphereBufferGeometry(3, 24, 24);
     const sphereMaterial = new THREE.MeshPhongMaterial({
       color: colors.sphere,
     });
 
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     sphere.position.y = 6.5;
-    sphere.castShadow = true;
+    // sphere.castShadow = true;
     scene.add(sphere);
 
     // Prism
@@ -141,11 +141,11 @@ class BackgroundAnimation extends React.Component {
     const prism = new THREE.Mesh(prismGeometry, prismMaterial);
     prism.position.x = 10;
     prism.position.y = 6.5;
-    prism.castShadow = true;
+    // prism.castShadow = true;
     scene.add(prism);
 
     // Orbit Controls
-    const controls = new OrbitControls(camera, this.canvas);
+    // const controls = new OrbitControls(camera, this.canvas);
 
     const renderCanvas = () => {
       const { activeScreen } = this.state;

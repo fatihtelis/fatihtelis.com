@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
 import libs from '../static/data/libs.json';
-import { colors } from '../style/theme';
+import { colors, media } from '../style/theme';
 
-const PortfolioImage = ({ data: { image } }) => <ImageBg image={image} />;
+const PortfolioImage = ({ data: { images } }) => <ImageBg images={images} />;
 
 const PortfolioInfo = ({
   data: {
@@ -52,9 +52,12 @@ const PortfolioInfo = ({
 );
 
 const ImageBg = styled.div`
-  background: ${props => `url(${props.image}) center/cover no-repeat`};
+  background: ${props => `url(${props.images.desktop}) center/cover no-repeat`};
   width: 100%;
   padding-top: 50%;
+  ${media.phone`
+    background: ${props => `url(${props.images.mobile}) center/cover no-repeat`};
+  `};
 `;
 
 const Info = styled(Flex)`
