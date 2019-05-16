@@ -167,15 +167,16 @@ function (_React$Component) {
 
 
       var ambient = new three__WEBPACK_IMPORTED_MODULE_2__["AmbientLight"](colors.ambient, 0.75);
-      scene.add(ambient); // Directional Light - Left
-
-      var directLightLeft = new three__WEBPACK_IMPORTED_MODULE_2__["DirectionalLight"](colors.directional.left, 0.35);
-      directLightLeft.position.set(-20, 40, 0);
-      scene.add(directLightLeft); // Directional Light - Right
-
-      var directLightRight = new three__WEBPACK_IMPORTED_MODULE_2__["DirectionalLight"](colors.directional.right, 0.65);
-      directLightRight.position.set(20, 40, 0);
-      scene.add(directLightRight); // Spotlight
+      scene.add(ambient); // // Directional Light - Left
+      // const directLightLeft = new THREE.DirectionalLight(colors.directional.left, 0.35);
+      // directLightLeft.position.set(-20, 40, 0);
+      // scene.add(directLightLeft);
+      //
+      // // Directional Light - Right
+      // const directLightRight = new THREE.DirectionalLight(colors.directional.right, 0.65);
+      // directLightRight.position.set(20, 40, 0);
+      // scene.add(directLightRight);
+      // Spotlight
 
       var spotlight = new three__WEBPACK_IMPORTED_MODULE_2__["SpotLight"](colors.spotlight, 0.5);
       spotlight.position.set(0, 50, 0);
@@ -184,9 +185,7 @@ function (_React$Component) {
 
       var earthGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["PlaneGeometry"](2000, 2000);
       var earthMaterial = new three__WEBPACK_IMPORTED_MODULE_2__["MeshStandardMaterial"]({
-        color: colors.earth,
-        dithering: true,
-        side: three__WEBPACK_IMPORTED_MODULE_2__["DoubleSide"]
+        color: colors.earth
       });
       var earth = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](earthGeometry, earthMaterial);
       earth.position.set(0, 0, 0);
@@ -198,7 +197,6 @@ function (_React$Component) {
       sky.position.set(0, 50, 0);
       sky.material = new three__WEBPACK_IMPORTED_MODULE_2__["MeshBasicMaterial"]({
         color: colors.sky,
-        dithering: true,
         side: three__WEBPACK_IMPORTED_MODULE_2__["DoubleSide"]
       });
       scene.add(sky); // Cube
@@ -210,8 +208,8 @@ function (_React$Component) {
       var cube = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](cubeGeometry, cubeMaterial);
       cube.position.x = -10;
       cube.position.y = 6.5;
-      cube.rotation.y = Math.PI / 4; // cube.castShadow = true;
-
+      cube.rotation.y = Math.PI / 4;
+      cube.castShadow = true;
       scene.add(cube); // Sphere
 
       var sphereGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["SphereBufferGeometry"](3, 24, 24);
@@ -219,8 +217,8 @@ function (_React$Component) {
         color: colors.sphere
       });
       var sphere = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](sphereGeometry, sphereMaterial);
-      sphere.position.y = 6.5; // sphere.castShadow = true;
-
+      sphere.position.y = 6.5;
+      sphere.castShadow = true;
       scene.add(sphere); // Prism
 
       var prismGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["ConeBufferGeometry"](4, 5, 6);
@@ -229,17 +227,17 @@ function (_React$Component) {
       });
       var prism = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](prismGeometry, prismMaterial);
       prism.position.x = 10;
-      prism.position.y = 6.5; // prism.castShadow = true;
-
+      prism.position.y = 6.5;
+      prism.castShadow = true;
       scene.add(prism); // Orbit Controls
       // const controls = new OrbitControls(camera, this.canvas);
 
       var renderCanvas = function renderCanvas() {
         var activeScreen = _this.state.activeScreen;
         requestAnimationFrame(renderCanvas);
-        cube.rotation.y += 0.015;
-        sphere.rotation.y += 0.015;
-        prism.rotation.y += 0.015;
+        cube.rotation.y += 0.01;
+        sphere.rotation.y += 0.01;
+        prism.rotation.y += 0.01;
 
         switch (activeScreen) {
           case 'about':
@@ -357,7 +355,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 239
+          lineNumber: 236
         },
         __self: this
       });
