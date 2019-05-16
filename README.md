@@ -1,6 +1,6 @@
 ## fatihtelis.com - Frontend Developer Portfolio Site by Fatih Telis
 
-Personal website project [fatihtelis.com](https://fatihtelis) is bootstraped with [create-next-app](https://github.com/segment-open-source-transfer/create-next-appand) made with the following frameworks/libs;
+Personal website project [fatihtelis.com](https://fatihtelis) is bootstraped with [create-next-app](https://github.com/segment-open-source-transfer/create-next-app) and made with the following frameworks/libs;
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
