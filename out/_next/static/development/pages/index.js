@@ -210,17 +210,17 @@ function (_React$Component) {
       var cube = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](cubeGeometry, cubeMaterial);
       cube.position.x = -10;
       cube.position.y = 6.5;
-      cube.rotation.y = Math.PI / 4;
-      cube.castShadow = true;
+      cube.rotation.y = Math.PI / 4; // cube.castShadow = true;
+
       scene.add(cube); // Sphere
 
-      var sphereGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["DodecahedronBufferGeometry"](3, 1);
+      var sphereGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["SphereBufferGeometry"](3, 24, 24);
       var sphereMaterial = new three__WEBPACK_IMPORTED_MODULE_2__["MeshPhongMaterial"]({
         color: colors.sphere
       });
       var sphere = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](sphereGeometry, sphereMaterial);
-      sphere.position.y = 6.5;
-      sphere.castShadow = true;
+      sphere.position.y = 6.5; // sphere.castShadow = true;
+
       scene.add(sphere); // Prism
 
       var prismGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["ConeBufferGeometry"](4, 5, 6);
@@ -229,11 +229,10 @@ function (_React$Component) {
       });
       var prism = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](prismGeometry, prismMaterial);
       prism.position.x = 10;
-      prism.position.y = 6.5;
-      prism.castShadow = true;
-      scene.add(prism); // Orbit Controls
+      prism.position.y = 6.5; // prism.castShadow = true;
 
-      var controls = new three_orbitcontrols__WEBPACK_IMPORTED_MODULE_3___default.a(camera, _this.canvas);
+      scene.add(prism); // Orbit Controls
+      // const controls = new OrbitControls(camera, this.canvas);
 
       var renderCanvas = function renderCanvas() {
         var activeScreen = _this.state.activeScreen;
@@ -392,14 +391,27 @@ var _static_data_libs_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*
 var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/components/PortfolioItem.js";
 
 
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    background: ", ";\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
 
 
 
 
 var PortfolioImage = function PortfolioImage(_ref) {
-  var image = _ref.data.image;
+  var images = _ref.data.images;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ImageBg, {
-    image: image,
+    images: images,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
@@ -555,9 +567,11 @@ var PortfolioInfo = function PortfolioInfo(_ref2) {
 var ImageBg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "PortfolioItem__ImageBg",
   componentId: "sc-71m4an-0"
-})(["background:", ";width:100%;padding-top:50%;"], function (props) {
-  return "url(".concat(props.image, ") center/cover no-repeat");
-});
+})(["background:", ";width:100%;padding-top:50%;", ";"], function (props) {
+  return "url(".concat(props.images.desktop, ") center/cover no-repeat");
+}, _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject(), function (props) {
+  return "url(".concat(props.images.mobile, ") center/cover no-repeat");
+}));
 var Info = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
   displayName: "PortfolioItem__Info",
   componentId: "sc-71m4an-1"
@@ -112023,8 +112037,88 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/index.js";
 
 
-function _templateObject() {
+function _templateObject9() {
   var data = _taggedTemplateLiteral(["\n    width: 160px;\n    height: 160px;\n  "]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n          transform: none;\n          padding: 10px 0 0;\n        "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n          opacity: 0;\n          height: 0;\n          pointer-events: none;\n          padding: 0;\n        "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n        transition: 0s;\n      "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n      padding: 0 0 5px;\n    "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    flex-direction: column;\n    align-items: flex-end;\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n      font-size: 12px;\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n      font-size: 28px;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n      align-items: flex-start;\n      padding-top: 20px;\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -112173,7 +112267,7 @@ var Home = function Home() {
     className: classnames__WEBPACK_IMPORTED_MODULE_3___default()({
       active: !activeScreen
     }),
-    href: "https://github.com",
+    href: "https://github.com/fatihtelis/fatihtelis.com",
     target: "_blank",
     rel: "noopener noreferrer",
     __source: {
@@ -112201,19 +112295,19 @@ var Home = function Home() {
 var Navigation = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].nav.withConfig({
   displayName: "pages__Navigation",
   componentId: "mwjthg-0"
-})(["position:fixed;left:0;top:0;right:0;height:100px;z-index:200;.container{display:flex;justify-content:space-between;align-items:center;height:100%;}&.light{color:white;.logo{transition:0.3s 0.3s;}}"]);
+})(["position:fixed;left:0;top:0;right:0;height:100px;z-index:200;.container{display:flex;justify-content:space-between;align-items:center;height:100%;", ";}&.light{color:white;.logo{transition:0.3s 0.3s;}}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject()));
 var Logo = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
   displayName: "pages__Logo",
   componentId: "mwjthg-1"
-})(["transition:0.3s;line-height:1;.name{font-size:32px;}.title{font-size:14px;font-weight:300;letter-spacing:0.6px;}"]);
+})(["transition:0.3s;line-height:1;white-space:nowrap;.name{font-size:32px;", ";}.title{font-size:14px;font-weight:300;letter-spacing:0.6px;", ";}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject2()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject3()));
 var Menu = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul.withConfig({
   displayName: "pages__Menu",
   componentId: "mwjthg-2"
-})(["padding-left:0;display:flex;align-items:center;height:50px;padding:0;li{list-style-type:none;padding:0 30px;transition:0.3s;transform-origin:center;display:flex;align-items:center;justify-content:flex-end;font-size:18px;button{position:relative;background-color:transparent;border:none;outline:unset;display:flex;cursor:pointer;transition:0.3s;.bx{position:absolute;right:-5px;top:-5px;font-size:12px;opacity:0;&.active{opacity:1;}}}}&.selected{li{transition:0.6s;&:not(.active){opacity:0.5;cursor:not-allowed;text-decoration:line-through;button{pointer-events:none;}}&.active{opacity:1;transform:scale(1.2);}button{color:white;transition:0.3s 0.3s;}}}"]);
+})(["padding-left:0;display:flex;align-items:center;padding:0;margin:0;", ";li{list-style-type:none;padding:0 30px;transition:0.3s;transform-origin:center;display:flex;align-items:center;justify-content:flex-end;font-size:18px;", ";button{position:relative;background-color:transparent;border:none;outline:unset;display:flex;cursor:pointer;transition:0.3s;.bx{position:absolute;right:-5px;top:-5px;font-size:12px;opacity:0;&.active{opacity:1;}}}}&.selected{li{transition:0.6s;", ";&:not(.active){opacity:0.5;cursor:not-allowed;text-decoration:line-through;", ";button{pointer-events:none;}}&.active{opacity:1;transform:scale(1.2);", ";}button{color:white;transition:0.3s 0.3s;}}}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject4()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject5()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject6()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject7()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].phone(_templateObject8()));
 var PageCurl = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
   displayName: "pages__PageCurl",
   componentId: "mwjthg-3"
-})(["position:absolute;bottom:0;right:0;width:200px;height:200px;z-index:120;opacity:0;pointer-events:none;transition:0.2s;cursor:alias;", ";.fold{", ";background:url('/static/page-curl/fold.png') center/contain no-repeat;z-index:2;}.code{", ";background:url('/static/page-curl/code.png') center/contain no-repeat;z-index:1;}&.active{opacity:1;pointer-events:visible;}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject()), Object(_style_theme__WEBPACK_IMPORTED_MODULE_7__["cover"])(), Object(_style_theme__WEBPACK_IMPORTED_MODULE_7__["cover"])());
+})(["position:absolute;bottom:0;right:0;width:200px;height:200px;z-index:120;opacity:0;pointer-events:none;transition:0.2s;cursor:alias;", ";.fold{", ";background:url('/static/page-curl/fold.png') center/contain no-repeat;z-index:2;}.code{", ";background:url('/static/page-curl/code.png') center/contain no-repeat;z-index:1;}&.active{opacity:1;pointer-events:visible;}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject9()), Object(_style_theme__WEBPACK_IMPORTED_MODULE_7__["cover"])(), Object(_style_theme__WEBPACK_IMPORTED_MODULE_7__["cover"])());
 var Main = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].main.withConfig({
   displayName: "pages__Main",
   componentId: "mwjthg-4"
@@ -112922,7 +113016,7 @@ var Portfolio = function Portfolio(_ref) {
   }), _portfolio_json__WEBPACK_IMPORTED_MODULE_5__.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "slide",
-      key: item.image,
+      key: "".concat(item.images.desktop, "-").concat(item.images.mobile),
       __source: {
         fileName: _jsxFileName,
         lineNumber: 65
@@ -113058,7 +113152,7 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_r
 /*! exports provided: 0, 1, 2, 3, 4, 5, 6, default */
 /***/ (function(module) {
 
-module.exports = [{"title":"Teleskop.app Website","description":"Teleskop App is a digital media monitoring application. https://teleskop.app is promotion site of the main product. It presents the features, pricing plans of the products in addition to policies and contact forms.","image":"/static/portfolio/teleskop-web/main.png","screenshots":["/static/portfolio/teleskop-web/desktop.png","/static/portfolio/teleskop-web/mobile.png"],"link":"https://teleskop.app","hasActiveLink":true,"technologies":["React","Next.js"]},{"title":"Teleskop.app Web Application","description":"https://login.teleskop.app is user-only web application of Teleskop App where you monitor your special streams for different topics specified with keywords. It also offers statistical info about streams with charts. It has integration with iyzico for payment.","image":"/static/portfolio/teleskop-app/main.png","screenshots":["/static/portfolio/teleskop-app/desktop-1.png","/static/portfolio/teleskop-app/desktop-2.png","/static/portfolio/teleskop-app/mobile-1.png","/static/portfolio/teleskop-app/mobile-2.png"],"link":"https://login.teleskop.app","hasActiveLink":true,"technologies":["React","Next.js","React Redux","Chart.js"]},{"title":"T.C. Ulaştırma Bakanlığı","description":"The project includes main portal of T.C. Ulaştırma Bakanlığı as well as subsites of the organization such as general directorates, regional departments and suborganizations. Main and subsites can be customized by using enviroment and theme file. With this technique, you can control different sites from one single repository.","image":"/static/portfolio/uab/main.png","screenshots":["/static/portfolio/uab/desktop.png","/static/portfolio/uab/mobile.png"],"link":"https://uab.gov.tr","hasActiveLink":true,"technologies":["React","Next.js","React Redux"]},{"title":"Aloparça","description":"Aloparça is #1 online automative spare part store in Turkey. Aloparça is a comprehensive e-commerce project including different modules like user management, cart & payment, maintenance robot, hierarchical spare part search etc. Semantic UI (React) is used in the majority of the site as UI library.","image":"/static/portfolio/aloparca/main.png","screenshots":["/static/portfolio/aloparca/desktop.png","/static/portfolio/aloparca/mobile.png"],"link":"https://aloparca.com","hasActiveLink":true,"technologies":["React","Next.js","React Redux"]},{"title":"5G TR Forum","description":"5G TR Forum is a subsite of BTK (Bilgi Teknolojileri Kurumu) focused on 5G technology. The site offers up-to-date news about 5G in Turkey and gives detailed explanation about the regulations and upcoming innovations.","image":"/static/portfolio/5g/main.png","screenshots":["/static/portfolio/5g/desktop.png","/static/portfolio/5g/mobile.png"],"link":"https://5gtrforum.org.tr","hasActiveLink":false,"technologies":["React","Next.js"]},{"title":"Özbekoğlu","description":"Özbekoğlu is an international company manufacturing industrial equipments. ozb.com.tr is a website presents info mainly about the company, products and distributors. The site is available for 6 different languages.","image":"/static/portfolio/ozb/main.png","screenshots":["/static/portfolio/ozb/desktop.png","/static/portfolio/ozb/mobile.png"],"link":"https://ozb.com.tr","hasActiveLink":true,"technologies":["React","Next.js"]},{"title":"YouFolders","description":"YouFolders is a YouTube subscription organizer. Users can group their subscriptions into different topics and manage them by special tools easily. YouFolders is a personal project all created by myself by using YouTube API.","image":"/static/portfolio/youfolders/main.png","screenshots":["/static/portfolio/youfolders/desktop-1.png","/static/portfolio/youfolders/desktop-2.png","/static/portfolio/youfolders/mobile-1.png","/static/portfolio/youfolders/mobile-2.png"],"link":"https://youfolders.com","hasActiveLink":true,"technologies":["jQuery","ASP.NET"]}];
+module.exports = [{"title":"Teleskop.app Website","description":"Teleskop App is a digital media monitoring application. https://teleskop.app is promotion site of the main product. It presents the features, pricing plans of the products in addition to policies and contact forms.","images":{"desktop":"/static/portfolio/teleskop-web/main.png","mobile":"/static/portfolio/teleskop-web/main-mobile.png"},"screenshots":["/static/portfolio/teleskop-web/desktop.png","/static/portfolio/teleskop-web/mobile.png"],"link":"https://teleskop.app","hasActiveLink":true,"technologies":["React","Next.js"]},{"title":"Teleskop.app Web Application","description":"https://login.teleskop.app is user-only web application of Teleskop App where you monitor your special streams for different topics specified with keywords. It also offers statistical info about streams with charts. It has integration with iyzico for payment.","images":{"desktop":"/static/portfolio/teleskop-app/main.png","mobile":"/static/portfolio/teleskop-app/main-mobile.png"},"screenshots":["/static/portfolio/teleskop-app/desktop-1.png","/static/portfolio/teleskop-app/desktop-2.png","/static/portfolio/teleskop-app/mobile-1.png","/static/portfolio/teleskop-app/mobile-2.png"],"link":"https://login.teleskop.app","hasActiveLink":true,"technologies":["React","Next.js","React Redux","Chart.js"]},{"title":"T.C. Ulaştırma Bakanlığı","description":"The project includes main portal of T.C. Ulaştırma Bakanlığı as well as subsites of the organization such as general directorates, regional departments and suborganizations. Main and subsites can be customized by using enviroment and theme file. With this technique, you can control different sites from one single repository.","images":{"desktop":"/static/portfolio/uab/main.png","mobile":"/static/portfolio/uab/main-mobile.png"},"screenshots":["/static/portfolio/uab/desktop.png","/static/portfolio/uab/mobile.png"],"link":"https://uab.gov.tr","hasActiveLink":true,"technologies":["React","Next.js","React Redux"]},{"title":"Aloparça","description":"Aloparça is #1 online automative spare part store in Turkey. Aloparça is a comprehensive e-commerce project including different modules like user management, cart & payment, maintenance robot, hierarchical spare part search etc. Semantic UI (React) is used in the majority of the site as UI library.","images":{"desktop":"/static/portfolio/aloparca/main.png","mobile":"/static/portfolio/aloparca/main-mobile.png"},"screenshots":["/static/portfolio/aloparca/desktop.png","/static/portfolio/aloparca/mobile.png"],"link":"https://aloparca.com","hasActiveLink":true,"technologies":["React","Next.js","React Redux"]},{"title":"5G TR Forum","description":"5G TR Forum is a subsite of BTK (Bilgi Teknolojileri Kurumu) focused on 5G technology. The site offers up-to-date news about 5G in Turkey and gives detailed explanation about the regulations and upcoming innovations.","images":{"desktop":"/static/portfolio/5g/main.png","mobile":"/static/portfolio/5g/main-mobile.png"},"screenshots":["/static/portfolio/5g/desktop.png","/static/portfolio/5g/mobile.png"],"link":"https://5gtrforum.org.tr","hasActiveLink":false,"technologies":["React","Next.js"]},{"title":"Özbekoğlu","description":"Özbekoğlu is an international company manufacturing industrial equipments. ozb.com.tr is a website presents info mainly about the company, products and distributors. The site is available for 6 different languages.","images":{"desktop":"/static/portfolio/ozb/main.png","mobile":"/static/portfolio/ozb/main-mobile.png"},"screenshots":["/static/portfolio/ozb/desktop.png","/static/portfolio/ozb/mobile.png"],"link":"https://ozb.com.tr","hasActiveLink":true,"technologies":["React","Next.js"]},{"title":"YouFolders","description":"YouFolders is a YouTube subscription organizer. Users can group their subscriptions into different topics and manage them by special tools easily. YouFolders is a personal project all created by myself by using YouTube API.","images":{"desktop":"/static/portfolio/youfolders/main.png","mobile":"/static/portfolio/youfolders/main-mobile.png"},"screenshots":["/static/portfolio/youfolders/desktop-1.png","/static/portfolio/youfolders/desktop-2.png","/static/portfolio/youfolders/mobile-1.png","/static/portfolio/youfolders/mobile-2.png"],"link":"https://youfolders.com","hasActiveLink":true,"technologies":["jQuery","ASP.NET"]}];
 
 /***/ }),
 
