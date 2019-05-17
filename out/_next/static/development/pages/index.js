@@ -176,8 +176,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(BackgroundAnimation)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      activeScreen: _this.props.activeScreen,
-      doAnimate: 0
+      activeScreen: _this.props.activeScreen
     });
 
     _defineProperty(_assertThisInitialized(_this), "startAnimation", function () {
@@ -274,112 +273,96 @@ function (_React$Component) {
         var _ref = _asyncToGenerator(
         /*#__PURE__*/
         _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-          var catalyzer, _this$state, activeScreen, doAnimate;
-
+          var activeScreen;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
-                  catalyzer = 2;
-                  _this$state = _this.state, activeScreen = _this$state.activeScreen, doAnimate = _this$state.doAnimate;
+                  activeScreen = _this.state.activeScreen;
                   requestAnimationFrame(renderCanvas);
-                  _context.next = 5;
-                  return _this.setState({
-                    doAnimate: doAnimate + 1
-                  });
-
-                case 5:
-                  if (!(doAnimate % catalyzer !== 0)) {
-                    _context.next = 7;
-                    break;
-                  }
-
-                  return _context.abrupt("return");
-
-                case 7:
-                  cube.rotation.y += 0.01 * catalyzer;
-                  sphere.rotation.y += 0.01 * catalyzer;
-                  prism.rotation.y += 0.01 * catalyzer;
+                  cube.rotation.y += 0.01;
+                  sphere.rotation.y += 0.01;
+                  prism.rotation.y += 0.01;
                   _context.t0 = activeScreen;
-                  _context.next = _context.t0 === 'about' ? 13 : _context.t0 === 'portfolio' ? 15 : _context.t0 === 'contact' ? 17 : _context.t0 === 'cv' ? 19 : 21;
+                  _context.next = _context.t0 === 'about' ? 8 : _context.t0 === 'portfolio' ? 10 : _context.t0 === 'contact' ? 12 : _context.t0 === 'cv' ? 14 : 16;
                   break;
 
-                case 13:
+                case 8:
                   if (cube.position.z < 21) {
-                    cube.position.x += 0.36 * catalyzer;
-                    cube.position.z += 0.75 * catalyzer;
-                    cube.rotation.x -= 0.15 * catalyzer;
-                    cube.rotation.z += 0.1 * catalyzer;
+                    cube.position.x += 0.36;
+                    cube.position.z += 0.75;
+                    cube.rotation.x -= 0.15;
+                    cube.rotation.z += 0.1;
                   } else {
                     cube.rotation.x = 0;
                     cube.rotation.y = 0;
                     cube.rotation.z = 0;
                   }
 
-                  return _context.abrupt("break", 26);
+                  return _context.abrupt("break", 21);
 
-                case 15:
+                case 10:
                   if (sphere.position.z < 21) {
-                    sphere.position.y -= 0.05 * catalyzer;
-                    sphere.position.z += 0.75 * catalyzer;
-                    sphere.rotation.x -= 0.15 * catalyzer;
-                    sphere.rotation.z += 0.1 * catalyzer;
+                    sphere.position.y -= 0.05;
+                    sphere.position.z += 0.75;
+                    sphere.rotation.x -= 0.15;
+                    sphere.rotation.z += 0.1;
                   } else {
                     sphere.rotation.x = 0;
                     sphere.rotation.y = 0;
                     sphere.rotation.z = 0;
                   }
 
-                  return _context.abrupt("break", 26);
+                  return _context.abrupt("break", 21);
 
-                case 17:
+                case 12:
                   if (prism.position.z < 21) {
-                    prism.position.x -= 0.35 * catalyzer;
-                    prism.position.y -= 0.04 * catalyzer;
-                    prism.position.z += 0.75 * catalyzer;
-                    prism.rotation.x -= 0.05 * catalyzer;
+                    prism.position.x -= 0.35;
+                    prism.position.y -= 0.04;
+                    prism.position.z += 0.75;
+                    prism.rotation.x -= 0.05;
                   } else {
                     prism.rotation.x += 0;
                     prism.rotation.y = 0;
                   }
 
-                  return _context.abrupt("break", 26);
+                  return _context.abrupt("break", 21);
 
-                case 19:
+                case 14:
                   if (camera.rotation.x < Math.PI / 2) {
-                    camera.rotation.x += 0.05 * catalyzer;
+                    camera.rotation.x += 0.05;
                   }
 
-                  return _context.abrupt("break", 26);
+                  return _context.abrupt("break", 21);
 
-                case 21:
+                case 16:
                   if (cube.position.z > 0) {
-                    cube.position.x -= 0.48 * catalyzer;
-                    cube.position.z -= 1 * catalyzer;
+                    cube.position.x -= 0.48;
+                    cube.position.z -= 1;
                   }
 
                   if (sphere.position.z > 0) {
-                    sphere.position.y += 0.06666666 * catalyzer;
-                    sphere.position.z -= 1 * catalyzer;
+                    sphere.position.y += 0.06666666;
+                    sphere.position.z -= 1;
                   }
 
                   if (prism.position.z > 0) {
-                    prism.position.x += 0.46666666 * catalyzer;
-                    prism.position.y += 0.05333333 * catalyzer;
-                    prism.position.z -= 1 * catalyzer;
-                    prism.rotation.x += 0.06666666 * catalyzer;
+                    prism.position.x += 0.46666666;
+                    prism.position.y += 0.05333333;
+                    prism.position.z -= 1;
+                    prism.rotation.x += 0.06666666;
                   }
 
                   if (camera.rotation.x > 0) {
-                    camera.rotation.x -= 0.1 * catalyzer;
+                    camera.rotation.x -= 0.1;
                   }
 
-                  return _context.abrupt("break", 26);
+                  return _context.abrupt("break", 21);
 
-                case 26:
+                case 21:
                   renderer.render(scene, camera);
 
-                case 27:
+                case 22:
                 case "end":
                   return _context.stop();
               }
@@ -431,7 +414,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 240
+          lineNumber: 234
         },
         __self: this
       });
