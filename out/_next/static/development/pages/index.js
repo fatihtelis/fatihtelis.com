@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
 /***/ "./components/AboutItem.js":
 /*!*********************************!*\
@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @rebass/grid */ "./node_modules/@rebass/grid/dist/index.js");
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/components/AboutItem.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\components\\AboutItem.js";
 
 
 function _templateObject3() {
@@ -102,14 +102,21 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_r
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/components/BackgroundAnimation.js";
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\components\\BackgroundAnimation.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -132,22 +139,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
  // import OrbitControls from 'three-orbitcontrols';
 
-var Outer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+var Outer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "BackgroundAnimation__Outer",
-  componentId: "sc-139m4ld-0"
+  componentId: "lb1r2f-0"
 })(["position:fixed;top:0;left:0;right:0;bottom:0;z-index:10;"]);
 var colors = {
-  cube: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0xf6c523),
-  sphere: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0x1b00ff),
-  prism: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0xc82121),
-  sky: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0x000000),
-  ambient: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0xffffff),
-  spotlight: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0xffffff),
+  cube: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0xf6c523),
+  sphere: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0x1b00ff),
+  prism: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0xc82121),
+  sky: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0x000000),
+  ambient: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0xffffff),
+  spotlight: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0xffffff),
   directional: {
-    left: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0xff0000),
-    right: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0x0000ff)
+    left: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0xff0000),
+    right: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0x0000ff)
   },
-  background: new three__WEBPACK_IMPORTED_MODULE_2__["Color"](0xf5f7fa)
+  background: new three__WEBPACK_IMPORTED_MODULE_3__["Color"](0xf5f7fa)
 };
 
 var BackgroundAnimation =
@@ -169,23 +176,24 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(BackgroundAnimation)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      activeScreen: _this.props.activeScreen
+      activeScreen: _this.props.activeScreen,
+      doAnimate: 0
     });
 
     _defineProperty(_assertThisInitialized(_this), "startAnimation", function () {
       // Initializing Three.js Scene
-      var scene = new three__WEBPACK_IMPORTED_MODULE_2__["Scene"](); // Setting Camera
+      var scene = new three__WEBPACK_IMPORTED_MODULE_3__["Scene"](); // Setting Camera
 
       var dislayRatio = window.innerWidth / window.innerHeight;
-      var camera = new three__WEBPACK_IMPORTED_MODULE_2__["PerspectiveCamera"](75, dislayRatio, 0.1, 50);
+      var camera = new three__WEBPACK_IMPORTED_MODULE_3__["PerspectiveCamera"](75, dislayRatio, 0.1, 50);
       camera.position.y = 6;
       camera.position.z = 24; // Setting Renderer
 
-      var renderer = new three__WEBPACK_IMPORTED_MODULE_2__["WebGLRenderer"]({
+      var renderer = new three__WEBPACK_IMPORTED_MODULE_3__["WebGLRenderer"]({
         antialias: true
       });
       renderer.shadowMap.enabled = true;
-      renderer.shadowMap.type = three__WEBPACK_IMPORTED_MODULE_2__["PCFSoftShadowMap"];
+      renderer.shadowMap.type = three__WEBPACK_IMPORTED_MODULE_3__["PCFSoftShadowMap"];
       renderer.gammaInput = true;
       renderer.gammaOutput = true;
       renderer.setPixelRatio(window.devicePixelRatio);
@@ -196,26 +204,26 @@ function (_React$Component) {
       _this.canvas.appendChild(renderer.domElement); // Ambient Light
 
 
-      var ambient = new three__WEBPACK_IMPORTED_MODULE_2__["AmbientLight"](colors.ambient, 0.75);
+      var ambient = new three__WEBPACK_IMPORTED_MODULE_3__["AmbientLight"](colors.ambient, 0.75);
       scene.add(ambient); // Directional Light - Left
 
-      var directLightLeft = new three__WEBPACK_IMPORTED_MODULE_2__["DirectionalLight"](colors.directional.left, 0.5);
+      var directLightLeft = new three__WEBPACK_IMPORTED_MODULE_3__["DirectionalLight"](colors.directional.left, 0.5);
       directLightLeft.position.set(-20, 40, 0);
       scene.add(directLightLeft); // Directional Light - Right
 
-      var directLightRight = new three__WEBPACK_IMPORTED_MODULE_2__["DirectionalLight"](colors.directional.right, 0.5);
+      var directLightRight = new three__WEBPACK_IMPORTED_MODULE_3__["DirectionalLight"](colors.directional.right, 0.5);
       directLightRight.position.set(20, 40, 0);
       scene.add(directLightRight); // Spotlight
 
-      var spotlight = new three__WEBPACK_IMPORTED_MODULE_2__["SpotLight"](colors.spotlight, 0.5);
+      var spotlight = new three__WEBPACK_IMPORTED_MODULE_3__["SpotLight"](colors.spotlight, 0.5);
       spotlight.position.set(0, 50, 0);
       spotlight.castShadow = true;
       scene.add(spotlight); // Earth
 
-      var earthGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["PlaneGeometry"](2000, 2000);
-      var earthMaterial = new three__WEBPACK_IMPORTED_MODULE_2__["ShadowMaterial"]();
+      var earthGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["PlaneGeometry"](2000, 2000);
+      var earthMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["ShadowMaterial"]();
       earthMaterial.opacity = 0.05;
-      var earth = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](earthGeometry, earthMaterial);
+      var earth = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](earthGeometry, earthMaterial);
       earth.position.set(0, 0, 0);
       earth.rotation.x = -Math.PI * 0.5;
       earth.receiveShadow = true;
@@ -223,126 +231,166 @@ function (_React$Component) {
 
       var sky = earth.clone();
       sky.position.set(0, 50, 0);
-      sky.material = new three__WEBPACK_IMPORTED_MODULE_2__["MeshBasicMaterial"]({
+      sky.material = new three__WEBPACK_IMPORTED_MODULE_3__["MeshBasicMaterial"]({
         color: colors.sky,
-        side: three__WEBPACK_IMPORTED_MODULE_2__["DoubleSide"]
+        side: three__WEBPACK_IMPORTED_MODULE_3__["DoubleSide"]
       });
       scene.add(sky); // Cube
 
-      var cubeGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["BoxGeometry"](5, 5, 5);
-      var cubeMaterial = new three__WEBPACK_IMPORTED_MODULE_2__["MeshPhongMaterial"]({
+      var cubeGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["BoxGeometry"](5, 5, 5);
+      var cubeMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["MeshPhongMaterial"]({
         color: colors.cube
       });
-      var cube = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](cubeGeometry, cubeMaterial);
+      var cube = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](cubeGeometry, cubeMaterial);
       cube.position.x = -10;
       cube.position.y = 6.5;
       cube.rotation.y = Math.PI / 4;
       cube.castShadow = true;
       scene.add(cube); // Sphere
 
-      var sphereGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["SphereBufferGeometry"](3, 24, 24);
-      var sphereMaterial = new three__WEBPACK_IMPORTED_MODULE_2__["MeshPhongMaterial"]({
+      var sphereGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["SphereBufferGeometry"](3, 24, 24);
+      var sphereMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["MeshPhongMaterial"]({
         color: colors.sphere
       });
-      var sphere = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](sphereGeometry, sphereMaterial);
+      var sphere = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](sphereGeometry, sphereMaterial);
       sphere.position.y = 6.5;
       sphere.castShadow = true;
       scene.add(sphere); // Prism
 
-      var prismGeometry = new three__WEBPACK_IMPORTED_MODULE_2__["ConeBufferGeometry"](4, 5, 6);
-      var prismMaterial = new three__WEBPACK_IMPORTED_MODULE_2__["MeshPhongMaterial"]({
+      var prismGeometry = new three__WEBPACK_IMPORTED_MODULE_3__["ConeBufferGeometry"](4, 5, 6);
+      var prismMaterial = new three__WEBPACK_IMPORTED_MODULE_3__["MeshPhongMaterial"]({
         color: colors.prism
       });
-      var prism = new three__WEBPACK_IMPORTED_MODULE_2__["Mesh"](prismGeometry, prismMaterial);
+      var prism = new three__WEBPACK_IMPORTED_MODULE_3__["Mesh"](prismGeometry, prismMaterial);
       prism.position.x = 10;
       prism.position.y = 6.5;
       prism.castShadow = true;
       scene.add(prism); // Orbit Controls
       // const controls = new OrbitControls(camera, this.canvas);
 
-      var renderCanvas = function renderCanvas() {
-        var activeScreen = _this.state.activeScreen;
-        requestAnimationFrame(renderCanvas);
-        cube.rotation.y += 0.01;
-        sphere.rotation.y += 0.01;
-        prism.rotation.y += 0.01;
+      var renderCanvas =
+      /*#__PURE__*/
+      function () {
+        var _ref = _asyncToGenerator(
+        /*#__PURE__*/
+        _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+          var catalyzer, _this$state, activeScreen, doAnimate;
 
-        switch (activeScreen) {
-          case 'about':
-            if (cube.position.z < 21) {
-              cube.position.x += 0.36;
-              cube.position.z += 0.75;
-              cube.rotation.x -= 0.15;
-              cube.rotation.z += 0.1;
-            } else {
-              cube.rotation.x = 0;
-              cube.rotation.y = 0;
-              cube.rotation.z = 0;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  catalyzer = 2;
+                  _this$state = _this.state, activeScreen = _this$state.activeScreen, doAnimate = _this$state.doAnimate;
+                  requestAnimationFrame(renderCanvas);
+                  _context.next = 5;
+                  return _this.setState({
+                    doAnimate: doAnimate + 1
+                  });
+
+                case 5:
+                  if (!(doAnimate % catalyzer !== 0)) {
+                    _context.next = 7;
+                    break;
+                  }
+
+                  return _context.abrupt("return");
+
+                case 7:
+                  cube.rotation.y += 0.01 * catalyzer;
+                  sphere.rotation.y += 0.01 * catalyzer;
+                  prism.rotation.y += 0.01 * catalyzer;
+                  _context.t0 = activeScreen;
+                  _context.next = _context.t0 === 'about' ? 13 : _context.t0 === 'portfolio' ? 15 : _context.t0 === 'contact' ? 17 : _context.t0 === 'cv' ? 19 : 21;
+                  break;
+
+                case 13:
+                  if (cube.position.z < 21) {
+                    cube.position.x += 0.36 * catalyzer;
+                    cube.position.z += 0.75 * catalyzer;
+                    cube.rotation.x -= 0.15 * catalyzer;
+                    cube.rotation.z += 0.1 * catalyzer;
+                  } else {
+                    cube.rotation.x = 0;
+                    cube.rotation.y = 0;
+                    cube.rotation.z = 0;
+                  }
+
+                  return _context.abrupt("break", 26);
+
+                case 15:
+                  if (sphere.position.z < 21) {
+                    sphere.position.y -= 0.05 * catalyzer;
+                    sphere.position.z += 0.75 * catalyzer;
+                    sphere.rotation.x -= 0.15 * catalyzer;
+                    sphere.rotation.z += 0.1 * catalyzer;
+                  } else {
+                    sphere.rotation.x = 0;
+                    sphere.rotation.y = 0;
+                    sphere.rotation.z = 0;
+                  }
+
+                  return _context.abrupt("break", 26);
+
+                case 17:
+                  if (prism.position.z < 21) {
+                    prism.position.x -= 0.35 * catalyzer;
+                    prism.position.y -= 0.04 * catalyzer;
+                    prism.position.z += 0.75 * catalyzer;
+                    prism.rotation.x -= 0.05 * catalyzer;
+                  } else {
+                    prism.rotation.x += 0;
+                    prism.rotation.y = 0;
+                  }
+
+                  return _context.abrupt("break", 26);
+
+                case 19:
+                  if (camera.rotation.x < Math.PI / 2) {
+                    camera.rotation.x += 0.05 * catalyzer;
+                  }
+
+                  return _context.abrupt("break", 26);
+
+                case 21:
+                  if (cube.position.z > 0) {
+                    cube.position.x -= 0.48 * catalyzer;
+                    cube.position.z -= 1 * catalyzer;
+                  }
+
+                  if (sphere.position.z > 0) {
+                    sphere.position.y += 0.06666666 * catalyzer;
+                    sphere.position.z -= 1 * catalyzer;
+                  }
+
+                  if (prism.position.z > 0) {
+                    prism.position.x += 0.46666666 * catalyzer;
+                    prism.position.y += 0.05333333 * catalyzer;
+                    prism.position.z -= 1 * catalyzer;
+                    prism.rotation.x += 0.06666666 * catalyzer;
+                  }
+
+                  if (camera.rotation.x > 0) {
+                    camera.rotation.x -= 0.1 * catalyzer;
+                  }
+
+                  return _context.abrupt("break", 26);
+
+                case 26:
+                  renderer.render(scene, camera);
+
+                case 27:
+                case "end":
+                  return _context.stop();
+              }
             }
+          }, _callee, this);
+        }));
 
-            break;
-
-          case 'portfolio':
-            if (sphere.position.z < 21) {
-              sphere.position.y -= 0.05;
-              sphere.position.z += 0.75;
-              sphere.rotation.x -= 0.15;
-              sphere.rotation.z += 0.1;
-            } else {
-              sphere.rotation.x = 0;
-              sphere.rotation.y = 0;
-              sphere.rotation.z = 0;
-            }
-
-            break;
-
-          case 'contact':
-            if (prism.position.z < 21) {
-              prism.position.x -= 0.35;
-              prism.position.y -= 0.04;
-              prism.position.z += 0.75;
-              prism.rotation.x -= 0.05;
-            } else {
-              prism.rotation.x += 0;
-              prism.rotation.y = 0;
-            }
-
-            break;
-
-          case 'cv':
-            if (camera.rotation.x < Math.PI / 2) {
-              camera.rotation.x += 0.05;
-            }
-
-            break;
-
-          default:
-            if (cube.position.z > 0) {
-              cube.position.x -= 0.48;
-              cube.position.z -= 1;
-            }
-
-            if (sphere.position.z > 0) {
-              sphere.position.y += 0.06666666;
-              sphere.position.z -= 1;
-            }
-
-            if (prism.position.z > 0) {
-              prism.position.x += 0.46666666;
-              prism.position.y += 0.05333333;
-              prism.position.z -= 1;
-              prism.rotation.x += 0.06666666;
-            }
-
-            if (camera.rotation.x > 0) {
-              camera.rotation.x -= 0.1;
-            }
-
-            break;
-        }
-
-        renderer.render(scene, camera);
-      };
+        return function renderCanvas() {
+          return _ref.apply(this, arguments);
+        };
+      }();
 
       renderCanvas(); // Event Listener for Resize
 
@@ -363,8 +411,8 @@ function (_React$Component) {
     }
   }, {
     key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(_ref) {
-      var activeScreen = _ref.activeScreen;
+    value: function componentWillReceiveProps(_ref2) {
+      var activeScreen = _ref2.activeScreen;
 
       if (this.props.activeScreen !== activeScreen) {
         this.setState({
@@ -377,13 +425,13 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Outer, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Outer, {
         ref: function ref(n) {
           _this2.canvas = n;
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 240
         },
         __self: this
       });
@@ -391,7 +439,7 @@ function (_React$Component) {
   }]);
 
   return BackgroundAnimation;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (BackgroundAnimation);
 
@@ -414,7 +462,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _static_data_libs_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/data/libs.json */ "./static/data/libs.json");
 var _static_data_libs_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../static/data/libs.json */ "./static/data/libs.json", 1);
 /* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/components/PortfolioItem.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\components\\PortfolioItem.js";
 
 
 function _templateObject11() {
@@ -729,16 +777,48 @@ var PortfolioInfo = function PortfolioInfo(_ref2) {
 
 var ImageBg = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "PortfolioItem__ImageBg",
-  componentId: "sc-71m4an-0"
+  componentId: "sc-93yu50-0"
 })(["width:100%;padding-top:50%;background-position:center;background-repeat:no-no-repeat;background-size:cover;background-color:black;&.desktop{", ";}&.mobile{display:none;", ";}"], _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject2()));
 var Info = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
   displayName: "PortfolioItem__Info",
-  componentId: "sc-71m4an-1"
+  componentId: "sc-93yu50-1"
 })(["width:62.5%;height:300px;margin:0 auto;background-color:white;border-radius:4px;border-top-right-radius:0;border-top-left-radius:0;padding:30px;color:", ";border-top:1px solid #eee;", " ", ";.project-header{width:100%;padding-bottom:5px;", ";.project-title{font-size:20px;font-weight:700;", ";}a,a:visited,a:active{letter-spacing:1px;font-size:12px;color:#39318e;text-decoration:none;", ";}}.description{padding:30px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;", ";}.detail{margin-top:20px;", ";&-title{color:#999;font-size:12px;", ";}a,a:visited,a:active{margin-left:15px;color:#39318e;text-decoration:none;display:flex;align-items:flex-start;", ";.bx{font-size:12px;margin-left:2px;}}}"], _style_theme__WEBPACK_IMPORTED_MODULE_4__["colors"].font, _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].tablet(_templateObject3()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject4()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject5()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject6()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject7()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject8()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject9()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject10()), _style_theme__WEBPACK_IMPORTED_MODULE_4__["media"].phone(_templateObject11()));
 var PortfolioItem = {};
 PortfolioItem.Image = PortfolioImage;
 PortfolioItem.Info = PortfolioInfo;
 /* harmony default export */ __webpack_exports__["default"] = (PortfolioItem);
+
+/***/ }),
+
+/***/ "./components/Section.js":
+/*!*******************************!*\
+  !*** ./components/Section.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @rebass/grid */ "./node_modules/@rebass/grid/dist/index.js");
+/* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../style/theme */ "./style/theme.js");
+
+
+
+var Section = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_1__["Flex"]).attrs({
+  as: 'section'
+}).withConfig({
+  displayName: "Section",
+  componentId: "sc-6ahkvl-0"
+})(["", ";opacity:", ";pointer-events:", ";transition:", ";color:white;"], Object(_style_theme__WEBPACK_IMPORTED_MODULE_2__["cover"])(), function (props) {
+  return props.active ? '1' : '0';
+}, function (props) {
+  return props.active ? 'visible' : 'none';
+}, function (props) {
+  return props.active ? '1s 0.4s' : '0.1s';
+});
+/* harmony default export */ __webpack_exports__["default"] = (Section);
 
 /***/ }),
 
@@ -755,7 +835,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/layout/head.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\layout\\head.js";
 
 
 var defaultDescription = '';
@@ -953,7 +1033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./head */ "./layout/head.js");
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../style */ "./style/index.js");
 /* harmony import */ var _style_normalize__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../style/normalize */ "./style/normalize.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/layout/index.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\layout\\index.js";
 
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -4434,7 +4514,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.5' };
+var core = module.exports = { version: '2.5.7' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -5813,7 +5893,7 @@ var store = global[SHARED] || (global[SHARED] = {});
 })('versions', []).push({
   version: core.version,
   mode: __webpack_require__(/*! ./_library */ "./node_modules/core-js/library/modules/_library.js") ? 'pure' : 'global',
-  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
 });
 
 
@@ -111107,7 +111187,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _screens__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./screens */ "./pages/screens/index.js");
 /* harmony import */ var _components_BackgroundAnimation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/BackgroundAnimation */ "./components/BackgroundAnimation.js");
 /* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/index.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\pages\\index.js";
 
 
 function _templateObject9() {
@@ -111437,11 +111517,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @rebass/grid */ "./node_modules/@rebass/grid/dist/index.js");
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var _components_AboutItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/AboutItem */ "./components/AboutItem.js");
-/* harmony import */ var _about_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./about.json */ "./pages/screens/about/about.json");
-var _about_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./about.json */ "./pages/screens/about/about.json", 1);
-/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/screens/about/index.js";
+/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/Section */ "./components/Section.js");
+/* harmony import */ var _components_AboutItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/AboutItem */ "./components/AboutItem.js");
+/* harmony import */ var _about_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./about.json */ "./pages/screens/about/about.json");
+var _about_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./about.json */ "./pages/screens/about/about.json", 1);
+/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\pages\\screens\\about\\index.js";
 
 
 function _templateObject9() {
@@ -111543,12 +111624,13 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var animation;
 
 var About = function About(_ref) {
   var active = _ref.active;
   var items = Array.from({
-    length: _about_json__WEBPACK_IMPORTED_MODULE_5__.length
+    length: _about_json__WEBPACK_IMPORTED_MODULE_6__.length
   }, function () {
     return Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   });
@@ -111576,26 +111658,25 @@ var About = function About(_ref) {
       animation.reverse().timeScale(10);
     }
   }, [active]);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Outer, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     active: active,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
-    className: "screen",
-    flexDirection: "column",
-    alignItems: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Screen, {
+    flexDirection: "column",
+    alignItems: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
     },
     __self: this
   }, "Who Am I?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -111603,35 +111684,27 @@ var About = function About(_ref) {
     flexWrap: "wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
-  }, _about_json__WEBPACK_IMPORTED_MODULE_5__.map(function (item, index) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, _about_json__WEBPACK_IMPORTED_MODULE_6__.map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AboutItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
       innerRef: items[index],
       data: item,
       key: item.text,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 45
       },
       __self: this
     });
   }))));
 };
 
-var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).attrs({
-  as: 'section'
-}).withConfig({
-  displayName: "about__Outer",
+var Screen = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
+  displayName: "about__Screen",
   componentId: "sc-19kwd5u-0"
-})(["", ";opacity:", ";pointer-events:", ";transition:", ";color:white;.screen{", ";padding:40px 0;h2{font-size:36px;text-align:center;margin:0px auto 40px;", ";}.about{position:relative;width:100%;max-width:1000px;&::before{content:'';position:absolute;width:0;height:calc(100% + 40px);left:50%;border-left:1px dashed white;", ";}.about-item{width:calc(50% - 40px);position:relative;opacity:0;bottom:-100px;", ";&:nth-child(2n){margin:100px 0 0 40px;", ";&:before{content:'';position:absolute;right:100%;top:50%;width:35px;height:1px;background-color:white;", ";}&::after{content:'';position:absolute;left:-40px;top:50%;width:10px;height:10px;background-color:white;border-radius:50%;transform:translate(-50%,-50%);", ";}}&:nth-child(2n + 1){margin:0 40px 0 0;", ";&:before{content:'';position:absolute;left:100%;top:50%;width:35px;height:1px;background-color:white;", ";}&::after{content:'';position:absolute;right:-40px;top:50%;width:10px;height:10px;background-color:white;border-radius:50%;transform:translate(50%,-50%);", ";}}}}}"], Object(_style_theme__WEBPACK_IMPORTED_MODULE_6__["cover"])(), function (props) {
-  return props.active ? '1' : '0';
-}, function (props) {
-  return props.active ? 'visible' : 'none';
-}, function (props) {
-  return props.active ? '1s 0.4s' : '0.1s';
-}, _style_theme__WEBPACK_IMPORTED_MODULE_6__["container"], _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject2()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject3()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject4()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject5()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject6()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject7()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject8()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject9()));
+})(["", ";h2{font-size:36px;text-align:center;margin:0px auto 40px;", ";}.about{position:relative;width:100%;max-width:1000px;&::before{content:'';position:absolute;width:0;height:calc(100% + 40px);left:50%;border-left:1px dashed white;", ";}.about-item{width:calc(50% - 40px);position:relative;opacity:0;bottom:-100px;", ";&:nth-child(2n){margin:100px 0 0 40px;", ";&:before{content:'';position:absolute;right:100%;top:50%;width:35px;height:1px;background-color:white;", ";}&::after{content:'';position:absolute;left:-40px;top:50%;width:10px;height:10px;background-color:white;border-radius:50%;transform:translate(-50%,-50%);", ";}}&:nth-child(2n + 1){margin:0 40px 0 0;", ";&:before{content:'';position:absolute;left:100%;top:50%;width:35px;height:1px;background-color:white;", ";}&::after{content:'';position:absolute;right:-40px;top:50%;width:10px;height:10px;background-color:white;border-radius:50%;transform:translate(50%,-50%);", ";}}}}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["container"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject2()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject3()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject4()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject5()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject6()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject7()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject8()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject9()));
 /* harmony default export */ __webpack_exports__["default"] = (About);
     (function (Component, route) {
       if(!Component) return
@@ -111649,7 +111722,7 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_r
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens/about")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens\\about\\index")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -111681,10 +111754,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @rebass/grid */ "./node_modules/@rebass/grid/dist/index.js");
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var _contact_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contact.json */ "./pages/screens/contact/contact.json");
-var _contact_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./contact.json */ "./pages/screens/contact/contact.json", 1);
-/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/screens/contact/index.js";
+/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/Section */ "./components/Section.js");
+/* harmony import */ var _contact_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contact.json */ "./pages/screens/contact/contact.json");
+var _contact_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./contact.json */ "./pages/screens/contact/contact.json", 1);
+/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\pages\\screens\\contact\\index.js";
+
 
 
 
@@ -111697,7 +111772,7 @@ var animation;
 var Contact = function Contact(_ref) {
   var active = _ref.active;
   var icons = Array.from({
-    length: _contact_json__WEBPACK_IMPORTED_MODULE_4__.length
+    length: _contact_json__WEBPACK_IMPORTED_MODULE_5__.length
   }, function () {
     return Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   });
@@ -111725,26 +111800,25 @@ var Contact = function Contact(_ref) {
       animation.reverse().timeScale(10);
     }
   }, [active]);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Outer, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     active: active,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
-    className: "screen",
-    flexDirection: "column",
-    alignItems: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Screen, {
+    flexDirection: "column",
+    alignItems: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
     },
     __self: this
   }, "You can contact with me from..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -111752,10 +111826,10 @@ var Contact = function Contact(_ref) {
     alignItems: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
-  }, _contact_json__WEBPACK_IMPORTED_MODULE_4__.map(function (item, index) {
+  }, _contact_json__WEBPACK_IMPORTED_MODULE_5__.map(function (item, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       ref: icons[index],
       href: item.link,
@@ -111764,32 +111838,24 @@ var Contact = function Contact(_ref) {
       rel: "noopener noreferrer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 44
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "bx ".concat(item.icon),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 51
       },
       __self: this
     }));
   }))));
 };
 
-var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).attrs({
-  as: 'section'
-}).withConfig({
-  displayName: "contact__Outer",
-  componentId: "sc-1psjct0-0"
-})(["", ";opacity:", ";pointer-events:", ";transition:", ";color:white;.screen{", ";padding:40px 0;h2{font-weight:700;margin-bottom:15px;width:100%;text-align:center;}a{position:relative;top:40px;opacity:0;font-size:36px;color:white;margin:0 10px;}}"], Object(_style_theme__WEBPACK_IMPORTED_MODULE_5__["cover"])(), function (props) {
-  return props.active ? '1' : '0';
-}, function (props) {
-  return props.active ? 'visible' : 'none';
-}, function (props) {
-  return props.active ? '1s 0.4s' : '0.1s';
-}, _style_theme__WEBPACK_IMPORTED_MODULE_5__["container"]);
+var Screen = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
+  displayName: "contact__Screen",
+  componentId: "sc-18ouy1-0"
+})(["", ";padding:40px 0;h2{font-weight:700;margin-bottom:15px;width:100%;text-align:center;}a{position:relative;top:40px;opacity:0;font-size:36px;color:white;margin:0 10px;}"], _style_theme__WEBPACK_IMPORTED_MODULE_6__["container"]);
 /* harmony default export */ __webpack_exports__["default"] = (Contact);
     (function (Component, route) {
       if(!Component) return
@@ -111807,7 +111873,7 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_r
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens/contact")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens\\contact\\index")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -111824,13 +111890,14 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_r
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @rebass/grid */ "./node_modules/@rebass/grid/dist/index.js");
-/* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_pdf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-pdf */ "./node_modules/react-pdf/dist/entry.js");
-/* harmony import */ var react_pdf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_pdf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/screens/cv/index.js";
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @rebass/grid */ "./node_modules/@rebass/grid/dist/index.js");
+/* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_pdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-pdf */ "./node_modules/react-pdf/dist/entry.js");
+/* harmony import */ var react_pdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_pdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/Section */ "./components/Section.js");
+/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\pages\\screens\\cv\\index.js";
 
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -111846,7 +111913,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-react_pdf__WEBPACK_IMPORTED_MODULE_2__["pdfjs"].GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/".concat(react_pdf__WEBPACK_IMPORTED_MODULE_2__["pdfjs"].version, "/pdf.worker.js");
+
+react_pdf__WEBPACK_IMPORTED_MODULE_3__["pdfjs"].GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/".concat(react_pdf__WEBPACK_IMPORTED_MODULE_3__["pdfjs"].version, "/pdf.worker.js");
 var cv = '/static/cv/fatih-telis_cv.pdf';
 
 var CV = function CV(_ref) {
@@ -111863,36 +111931,35 @@ var CV = function CV(_ref) {
     var newScale = (windowHeight - 300) / docHeight;
     setScale(newScale);
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Outer, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     active: active,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_1__["Flex"], {
-    className: "screen",
-    flexDirection: "column",
-    alignItems: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_pdf__WEBPACK_IMPORTED_MODULE_2__["Document"], {
-    file: cv,
-    loading: "Loading CV...",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Screen, {
+    flexDirection: "column",
+    alignItems: "center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_pdf__WEBPACK_IMPORTED_MODULE_2__["Page"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_pdf__WEBPACK_IMPORTED_MODULE_3__["Document"], {
+    file: cv,
+    loading: "Loading CV...",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_pdf__WEBPACK_IMPORTED_MODULE_3__["Page"], {
     pageNumber: 1,
     scale: scale,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -111903,37 +111970,29 @@ var CV = function CV(_ref) {
     title: "Fatih Telis CV",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }, "Download CV"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "bx bx-download",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }))));
 };
 
-var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_1__["Flex"]).attrs({
-  as: 'section'
-}).withConfig({
-  displayName: "cv__Outer",
-  componentId: "tg2sa3-0"
-})(["", ";opacity:", ";pointer-events:", ";transition:", ";color:white;.screen{", ";padding:40px 0;.download{display:flex;justify-content:center;align-items:center;height:40px;padding:0 20px;font-size:16px;font-weight:600;background-color:white;border-radius:3px;margin:30px auto;color:", ";text-decoration:none;transition:0.25s;&:hover{background-color:#f5f5f5;transform:translateY(-3px);}.bx{margin-left:10px;}}}"], Object(_style_theme__WEBPACK_IMPORTED_MODULE_4__["cover"])(), function (props) {
-  return props.active ? '1' : '0';
-}, function (props) {
-  return props.active ? 'visible' : 'none';
-}, function (props) {
-  return props.active ? '1s 0.4s' : '0.1s';
-}, _style_theme__WEBPACK_IMPORTED_MODULE_4__["container"], _style_theme__WEBPACK_IMPORTED_MODULE_4__["colors"].font);
+var Screen = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
+  displayName: "cv__Screen",
+  componentId: "sc-1tdsxrl-0"
+})(["", ";padding:40px 0;.download{display:flex;justify-content:center;align-items:center;height:40px;padding:0 20px;font-size:16px;font-weight:600;background-color:white;border-radius:3px;margin:30px auto;color:", ";text-decoration:none;transition:0.25s;&:hover{background-color:#f5f5f5;transform:translateY(-3px);}.bx{margin-left:10px;}}"], _style_theme__WEBPACK_IMPORTED_MODULE_5__["container"], _style_theme__WEBPACK_IMPORTED_MODULE_5__["colors"].font);
 /* harmony default export */ __webpack_exports__["default"] = (CV);
     (function (Component, route) {
       if(!Component) return
@@ -111951,7 +112010,7 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(_r
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens/cv")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens\\cv\\index")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -111976,7 +112035,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contact */ "./pages/screens/contact/index.js");
 /* harmony import */ var _cv__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cv */ "./pages/screens/cv/index.js");
 /* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/screens/index.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\pages\\screens\\index.js";
 
 
 
@@ -112031,7 +112090,7 @@ var Screens = function Screens(_ref) {
 
 var ScreenWrapper = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
   displayName: "screens__ScreenWrapper",
-  componentId: "jq8fyb-0"
+  componentId: "sc-1y8ixhd-0"
 })(["", ";margin-top:100px;z-index:100;overflow-y:", ";"], Object(_style_theme__WEBPACK_IMPORTED_MODULE_7__["cover"])(), function (props) {
   return props.activeScreen ? 'auto' : 'hidden';
 });
@@ -112052,7 +112111,7 @@ var ScreenWrapper = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["defau
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens\\index")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -112074,11 +112133,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rebass_grid__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_id_swiper_lib_ReactIdSwiper_full__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-id-swiper/lib/ReactIdSwiper.full */ "./node_modules/react-id-swiper/lib/ReactIdSwiper.full.js");
 /* harmony import */ var react_id_swiper_lib_ReactIdSwiper_full__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_id_swiper_lib_ReactIdSwiper_full__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_PortfolioItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/PortfolioItem */ "./components/PortfolioItem.js");
-/* harmony import */ var _portfolio_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./portfolio.json */ "./pages/screens/portfolio/portfolio.json");
-var _portfolio_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./portfolio.json */ "./pages/screens/portfolio/portfolio.json", 1);
-/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/pages/screens/portfolio/index.js";
+/* harmony import */ var _components_Section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/Section */ "./components/Section.js");
+/* harmony import */ var _components_PortfolioItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/PortfolioItem */ "./components/PortfolioItem.js");
+/* harmony import */ var _portfolio_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portfolio.json */ "./pages/screens/portfolio/portfolio.json");
+var _portfolio_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./portfolio.json */ "./pages/screens/portfolio/portfolio.json", 1);
+/* harmony import */ var _style_theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../style/theme */ "./style/theme.js");
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\pages\\screens\\portfolio\\index.js";
 
 
 function _templateObject2() {
@@ -112112,6 +112172,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -112184,20 +112245,20 @@ var Portfolio = function Portfolio(_ref) {
       infoSwiper.controller.control = imageSwiper;
     }
   }, [imageSwiper, infoSwiper]);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Outer, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Section__WEBPACK_IMPORTED_MODULE_4__["default"], {
     active: active,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Screen, {
     className: "screen",
     flexDirection: "column",
     justifyContent: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_id_swiper_lib_ReactIdSwiper_full__WEBPACK_IMPORTED_MODULE_3___default.a, _extends({
@@ -112205,23 +112266,23 @@ var Portfolio = function Portfolio(_ref) {
   }, imageSwiperParams, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
-  }), _portfolio_json__WEBPACK_IMPORTED_MODULE_5__.map(function (item) {
+  }), _portfolio_json__WEBPACK_IMPORTED_MODULE_6__.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "slide",
       key: "".concat(item.images.desktop, "-").concat(item.images.mobile),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 70
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PortfolioItem__WEBPACK_IMPORTED_MODULE_4__["default"].Image, {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PortfolioItem__WEBPACK_IMPORTED_MODULE_5__["default"].Image, {
       data: item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 71
       },
       __self: this
     }));
@@ -112234,14 +112295,14 @@ var Portfolio = function Portfolio(_ref) {
         alignItems: "center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 79
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bx bx-left-arrow",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 80
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Box"], {
@@ -112249,7 +112310,7 @@ var Portfolio = function Portfolio(_ref) {
         mt: "2px",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 81
         },
         __self: this
       }, "PREVIOUS"));
@@ -112260,7 +112321,7 @@ var Portfolio = function Portfolio(_ref) {
         alignItems: "center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 87
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Box"], {
@@ -112268,55 +112329,47 @@ var Portfolio = function Portfolio(_ref) {
         mt: "2px",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 88
         },
         __self: this
       }, "NEXT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bx bx-right-arrow",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 91
         },
         __self: this
       }));
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
-  }), _portfolio_json__WEBPACK_IMPORTED_MODULE_5__.map(function (item) {
+  }), _portfolio_json__WEBPACK_IMPORTED_MODULE_6__.map(function (item) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "slide",
       key: item.title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 96
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PortfolioItem__WEBPACK_IMPORTED_MODULE_4__["default"].Info, {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PortfolioItem__WEBPACK_IMPORTED_MODULE_5__["default"].Info, {
       data: item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 97
       },
       __self: this
     }));
   }))));
 };
 
-var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).attrs({
-  as: 'section'
-}).withConfig({
-  displayName: "portfolio__Outer",
-  componentId: "sc-1iou7aq-0"
-})(["", ";opacity:", ";pointer-events:", ";transition:", ";color:white;.screen{", ";.image-swiper,.info-swiper{overflow:hidden;}.info-swiper{padding-bottom:50px;position:relative;.prev,.next{position:absolute;bottom:20px;font-size:14px;line-height:1;letter-spacing:2px;font-weight:300;cursor:pointer;.bx{font-size:12px;}}.prev{left:18.75%;", ";}.next{right:18.75%;", ";}}}"], Object(_style_theme__WEBPACK_IMPORTED_MODULE_6__["cover"])(), function (props) {
-  return props.active ? '1' : '0';
-}, function (props) {
-  return props.active ? 'visible' : 'none';
-}, function (props) {
-  return props.active ? '1s 0.4s' : '0.1s';
-}, _style_theme__WEBPACK_IMPORTED_MODULE_6__["container"], _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject()), _style_theme__WEBPACK_IMPORTED_MODULE_6__["media"].tablet(_templateObject2()));
+var Screen = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_rebass_grid__WEBPACK_IMPORTED_MODULE_2__["Flex"]).withConfig({
+  displayName: "portfolio__Screen",
+  componentId: "vy66ao-0"
+})(["", ";.image-swiper,.info-swiper{overflow:hidden;}.info-swiper{padding-bottom:50px;position:relative;.prev,.next{position:absolute;bottom:20px;font-size:14px;line-height:1;letter-spacing:2px;font-weight:300;cursor:pointer;.bx{font-size:12px;}}.prev{left:18.75%;", ";}.next{right:18.75%;", ";}}"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["container"], _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject()), _style_theme__WEBPACK_IMPORTED_MODULE_7__["media"].tablet(_templateObject2()));
 /* harmony default export */ __webpack_exports__["default"] = (Portfolio);
     (function (Component, route) {
       if(!Component) return
@@ -112334,7 +112387,7 @@ var Outer = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_r
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens/portfolio")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/screens\\portfolio\\index")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -112439,7 +112492,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/fabrikamedya/Work/portfolio/style/theme.js";
+var _jsxFileName = "C:\\Users\\Fatih Telis\\Desktop\\fatihtelis.com\\fatihtelis.com\\style\\theme.js";
 
 
 function _templateObject3() {
@@ -112499,7 +112552,7 @@ var media = Object.keys(sizes).reduce(function (accumulator, label) {
 var container = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["css"])(["max-width:1300px;width:100%;margin:auto;", ";", ";", ";"], media.giant(_templateObject()), media.tablet(_templateObject2()), media.mini(_templateObject3()));
 var ContainerOuter = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "theme__ContainerOuter",
-  componentId: "sjm370-0"
+  componentId: "tqln6p-0"
 })(["", ";"], container);
 var Container = function Container(_ref) {
   var className = _ref.className,
