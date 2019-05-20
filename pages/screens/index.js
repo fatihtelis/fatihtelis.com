@@ -8,12 +8,7 @@ import CV from './cv';
 import { cover } from '../../style/theme';
 
 const Screens = ({ activeScreen }) => (
-  <ScreenWrapper
-    activeScreen={activeScreen}
-    justiftContent="center"
-    alignItems="center"
-    flexDirection="column"
-  >
+  <ScreenWrapper justiftContent="center" alignItems="center" flexDirection="column">
     <About active={activeScreen === 'about'} />
     <Portfolio active={activeScreen === 'portfolio'} />
     <Contact active={activeScreen === 'contact'} />
@@ -25,7 +20,6 @@ const ScreenWrapper = styled(Flex)`
   ${cover()};
   margin-top: 100px;
   z-index: 100;
-  overflow-y: ${props => (props.activeScreen ? 'auto' : 'hidden')};
 `;
 
 export default Screens;

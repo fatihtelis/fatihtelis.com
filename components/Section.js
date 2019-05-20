@@ -7,6 +7,7 @@ const Section = styled(Flex).attrs({ as: 'section' })`
   opacity: ${props => (props.active ? '1' : '0')};
   pointer-events: ${props => (props.active ? 'visible' : 'none')};
   transition: ${props => (props.active ? '1s 0.4s' : '0.1s')};
+  overflow-y: ${props => (props.active ? 'auto' : 'hidden')};
   color: white;
 `;
 

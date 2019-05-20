@@ -6,7 +6,7 @@ import cn from 'classnames';
 import Layout from '../layout';
 import Screens from './screens';
 import BackgroundAnimation from '../components/BackgroundAnimation';
-import { media, cover, Container } from '../style/theme';
+import { media, Container } from '../style/theme';
 
 const screens = ['about', 'portfolio', 'contact', 'cv'];
 
