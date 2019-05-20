@@ -14,9 +14,6 @@ install:
   - npm install
   - npm run export:gh-pages
 
-script:
-  - echo "Exported successfully!"
-
 deploy:
   provider: pages
   skip-cleanup: true
