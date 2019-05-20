@@ -14,6 +14,9 @@ install:
   - npm install
   - npm run export:gh-pages
 
+script:
+  - echo "Skip testing..."
+
 deploy:
   provider: pages
   skip-cleanup: true
