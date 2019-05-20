@@ -51,15 +51,6 @@ const Home = () => {
       <Main>
         <BackgroundAnimation activeScreen={activeScreen} />
         <Screens activeScreen={activeScreen} />
-        {/* <PageCurl
-          className={cn({ active: !activeScreen })}
-          href="https://github.com/fatihtelis/fatihtelis.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="fold" />
-          <div className="code" />
-        </PageCurl> */}
       </Main>
     </Layout>
   );
@@ -185,37 +176,6 @@ const Menu = styled.ul`
         transition: 0.3s 0.3s;
       }
     }
-  }
-`;
-
-const PageCurl = styled.a`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  z-index: 120;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.2s;
-  cursor: alias;
-  ${media.tablet`
-    width: 160px;
-    height: 160px;
-  `};
-  .fold {
-    ${cover()};
-    background: url('/static/page-curl/fold.png') center/contain no-repeat;
-    z-index: 2;
-  }
-  .code {
-    ${cover()};
-    background: url('/static/page-curl/code.png') center/contain no-repeat;
-    z-index: 1;
-  }
-  &.active {
-    opacity: 1;
-    pointer-events: visible;
   }
 `;
 

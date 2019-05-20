@@ -4,9 +4,8 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
-    "export-gh-pages": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"fatihtelis.com\" >> out/CNAME",
-    "deploy": "yarn export-gh-pages && git add out/ && git commit -m \"Deploy to gh-pages\"  && git subtree push --prefix out origin gh-pages"
+    "export:gh-pages": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"fatihtelis.com\" >> out/CNAME",
+    "start": "next start"
   },
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",

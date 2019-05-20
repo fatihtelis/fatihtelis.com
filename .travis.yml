@@ -3,8 +3,8 @@ node_js:
   - '10'
 
 cache:
-directories:
-  - 'node_modules'
+  directories:
+    - 'node_modules'
 
 branches:
   only:
@@ -12,9 +12,10 @@ branches:
 
 install:
   - npm install
+  - npm run export:gh-pages
 
 script:
-  - npm run export-gh-pages
+  - echo "Exported successfully!"
 
 deploy:
   provider: pages
