@@ -51,7 +51,7 @@ const Home = () => {
       <Main>
         <BackgroundAnimation activeScreen={activeScreen} />
         <Screens activeScreen={activeScreen} />
-        <PageCurl
+        {/* <PageCurl
           className={cn({ active: !activeScreen })}
           href="https://github.com/fatihtelis/fatihtelis.com"
           target="_blank"
@@ -59,7 +59,7 @@ const Home = () => {
         >
           <div className="fold" />
           <div className="code" />
-        </PageCurl>
+        </PageCurl> */}
       </Main>
     </Layout>
   );
