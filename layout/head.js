@@ -27,8 +27,6 @@ const Head = ({
     <meta property="og:image" content={ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="stylesheet" href="/static/fonts/sofia-pro/fontstyle.css" />
-    <link rel="stylesheet" href="/static/boxicons/css/boxicons.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"

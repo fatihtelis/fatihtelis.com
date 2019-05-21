@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import { colors } from './theme';
 
+import '../static/fonts/sofia-pro/fontstyle.css';
+import '../static/boxicons/css/boxicons.css';
+
 const GlobalStyle = createGlobalStyle`
   *, ::after, ::before {
     box-sizing: border-box;
