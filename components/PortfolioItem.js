@@ -151,7 +151,7 @@ const Info = styled(Flex)`
       flex-direction: column;
     `};
     &-title {
-      color: #999;
+      color: #666;
       font-size: 12px;
       ${media.phone`
         width: 100%;
