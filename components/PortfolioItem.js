@@ -101,6 +101,10 @@ const Info = styled(Flex)`
     height: 225px;
     padding: 20px;
   `};
+  @media (min-width: 768px) and (max-height: 900px) {
+    height: 150px;
+    padding: 20px;
+  }
   .project-header {
     width: 100%;
     padding-bottom: 5px;
@@ -108,6 +112,9 @@ const Info = styled(Flex)`
       flex-direction: column;
       border-bottom: 1px solid #eee;
     `};
+    @media (min-width: 768px) and (max-height: 900px) {
+      border-bottom: 1px solid #eee;
+    }
     .project-title {
       font-size: 20px;
       font-weight: 700;
@@ -134,6 +141,9 @@ const Info = styled(Flex)`
     ${media.phone`
       display: none;
     `};
+    @media (min-width: 768px) and (max-height: 900px) {
+      display: none;
+    }
   }
   .detail {
     margin-top: 20px;
