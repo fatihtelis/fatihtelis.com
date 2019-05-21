@@ -3,12 +3,12 @@
     "title": "Teleskop.app Website",
     "description": "Teleskop App is a digital media monitoring application. https://teleskop.app is promotion site of the main product. It presents the features, pricing plans of the products in addition to policies and contact forms.",
     "images": {
-      "desktop": "/static/portfolio/teleskop-web/main.png",
-      "mobile": "/static/portfolio/teleskop-web/main-mobile.png"
+      "desktop": "/static/portfolio/teleskop-web/main.jpg",
+      "mobile": "/static/portfolio/teleskop-web/main-mobile.jpg"
     },
     "screenshots": [
-      "/static/portfolio/teleskop-web/desktop.png",
-      "/static/portfolio/teleskop-web/mobile.png"
+      "/static/portfolio/teleskop-web/desktop.jpg",
+      "/static/portfolio/teleskop-web/mobile.jpg"
     ],
     "link": "https://teleskop.app",
     "hasActiveLink": true,
@@ -18,14 +18,14 @@
     "title": "Teleskop.app Web Application",
     "description": "https://login.teleskop.app is user-only web application of Teleskop App where you monitor your special streams for different topics specified with keywords. It also offers statistical info about streams with charts. It has integration with iyzico for payment.",
     "images": {
-      "desktop": "/static/portfolio/teleskop-app/main.png",
-      "mobile": "/static/portfolio/teleskop-app/main-mobile.png"
+      "desktop": "/static/portfolio/teleskop-app/main.jpg",
+      "mobile": "/static/portfolio/teleskop-app/main-mobile.jpg"
     },
     "screenshots": [
-      "/static/portfolio/teleskop-app/desktop-1.png",
-      "/static/portfolio/teleskop-app/desktop-2.png",
-      "/static/portfolio/teleskop-app/mobile-1.png",
-      "/static/portfolio/teleskop-app/mobile-2.png"
+      "/static/portfolio/teleskop-app/desktop-1.jpg",
+      "/static/portfolio/teleskop-app/desktop-2.jpg",
+      "/static/portfolio/teleskop-app/mobile-1.jpg",
+      "/static/portfolio/teleskop-app/mobile-2.jpg"
     ],
     "link": "https://login.teleskop.app",
     "hasActiveLink": true,
@@ -35,10 +35,10 @@
     "title": "T.C. Ulaştırma Bakanlığı",
     "description": "The project includes main portal of T.C. Ulaştırma Bakanlığı as well as subsites of the organization such as general directorates, regional departments and suborganizations. Main and subsites can be customized by using enviroment and theme file. With this technique, you can control different sites from one single repository.",
     "images": {
-      "desktop": "/static/portfolio/uab/main.png",
-      "mobile": "/static/portfolio/uab/main-mobile.png"
+      "desktop": "/static/portfolio/uab/main.jpg",
+      "mobile": "/static/portfolio/uab/main-mobile.jpg"
     },
-    "screenshots": ["/static/portfolio/uab/desktop.png", "/static/portfolio/uab/mobile.png"],
+    "screenshots": ["/static/portfolio/uab/desktop.jpg", "/static/portfolio/uab/mobile.jpg"],
     "link": "https://uab.gov.tr",
     "hasActiveLink": true,
     "technologies": ["React", "Next.js", "React Redux"]
@@ -47,12 +47,12 @@
     "title": "Aloparça",
     "description": "Aloparça is #1 online automative spare part store in Turkey. Aloparça is a comprehensive e-commerce project including different modules like user management, cart & payment, maintenance robot, hierarchical spare part search etc. Semantic UI (React) is used in the majority of the site as UI library.",
     "images": {
-      "desktop": "/static/portfolio/aloparca/main.png",
-      "mobile": "/static/portfolio/aloparca/main-mobile.png"
+      "desktop": "/static/portfolio/aloparca/main.jpg",
+      "mobile": "/static/portfolio/aloparca/main-mobile.jpg"
     },
     "screenshots": [
-      "/static/portfolio/aloparca/desktop.png",
-      "/static/portfolio/aloparca/mobile.png"
+      "/static/portfolio/aloparca/desktop.jpg",
+      "/static/portfolio/aloparca/mobile.jpg"
     ],
     "link": "https://aloparca.com",
     "hasActiveLink": true,
@@ -62,10 +62,10 @@
     "title": "5G TR Forum",
     "description": "5G TR Forum is a subsite of BTK (Bilgi Teknolojileri Kurumu) focused on 5G technology. The site offers up-to-date news about 5G in Turkey and gives detailed explanation about the regulations and upcoming innovations.",
     "images": {
-      "desktop": "/static/portfolio/5g/main.png",
-      "mobile": "/static/portfolio/5g/main-mobile.png"
+      "desktop": "/static/portfolio/5g/main.jpg",
+      "mobile": "/static/portfolio/5g/main-mobile.jpg"
     },
-    "screenshots": ["/static/portfolio/5g/desktop.png", "/static/portfolio/5g/mobile.png"],
+    "screenshots": ["/static/portfolio/5g/desktop.jpg", "/static/portfolio/5g/mobile.jpg"],
     "link": "https://5gtrforum.org.tr",
     "hasActiveLink": false,
     "technologies": ["React", "Next.js"]
@@ -74,10 +74,10 @@
     "title": "Özbekoğlu",
     "description": "Özbekoğlu is an international company manufacturing industrial equipments. ozb.com.tr is a website presents info mainly about the company, products and distributors. The site is available for 6 different languages.",
     "images": {
-      "desktop": "/static/portfolio/ozb/main.png",
-      "mobile": "/static/portfolio/ozb/main-mobile.png"
+      "desktop": "/static/portfolio/ozb/main.jpg",
+      "mobile": "/static/portfolio/ozb/main-mobile.jpg"
     },
-    "screenshots": ["/static/portfolio/ozb/desktop.png", "/static/portfolio/ozb/mobile.png"],
+    "screenshots": ["/static/portfolio/ozb/desktop.jpg", "/static/portfolio/ozb/mobile.jpg"],
     "link": "https://ozb.com.tr",
     "hasActiveLink": true,
     "technologies": ["React", "Next.js"]
@@ -86,14 +86,14 @@
     "title": "YouFolders",
     "description": "YouFolders is a YouTube subscription organizer. Users can group their subscriptions into different topics and manage them by special tools easily. YouFolders is a personal project all created by myself by using YouTube API.",
     "images": {
-      "desktop": "/static/portfolio/youfolders/main.png",
-      "mobile": "/static/portfolio/youfolders/main-mobile.png"
+      "desktop": "/static/portfolio/youfolders/main.jpg",
+      "mobile": "/static/portfolio/youfolders/main-mobile.jpg"
     },
     "screenshots": [
-      "/static/portfolio/youfolders/desktop-1.png",
-      "/static/portfolio/youfolders/desktop-2.png",
-      "/static/portfolio/youfolders/mobile-1.png",
-      "/static/portfolio/youfolders/mobile-2.png"
+      "/static/portfolio/youfolders/desktop-1.jpg",
+      "/static/portfolio/youfolders/desktop-2.jpg",
+      "/static/portfolio/youfolders/mobile-1.jpg",
+      "/static/portfolio/youfolders/mobile-2.jpg"
     ],
     "link": "https://youfolders.com",
     "hasActiveLink": true,
