@@ -1,10 +1,11 @@
-module.exports = {
-  webpack: (config) => {
-    // Fixes npm packages that depend on `fs` module
-    config.node = {
-      fs: 'empty'
-    }
+const withOffline = require('next-offline');
 
-    return config
-  }
-}
+module.exports = withOffline({
+  webpack: (config) => {
+    config.node = {
+      fs: 'empty',
+    };
+
+    return config;
+  },
+});
