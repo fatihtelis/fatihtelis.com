@@ -47,6 +47,7 @@ const Contact = ({ active }) => {
               key={item.link}
               target="_blank"
               rel="noopener noreferrer"
+              title={item.title}
             >
               <i className={`bx ${item.icon}`} />
             </a>
