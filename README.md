@@ -1,3 +1,5 @@
+![Screenshot](https://raw.githubusercontent.com/fatihtelis/fatihtelis.com/master/static/screenshot.png)
+
 ## fatihtelis.com - Frontend Developer Portfolio Site by Fatih Telis
 
 Personal website project [fatihtelis.com](https://fatihtelis) is bootstraped with [create-next-app](https://github.com/segment-open-source-transfer/create-next-app) and made with the following frameworks/libs;
