@@ -1,31 +1,30 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
-// import { Page, Document, pdfjs } from 'react-pdf';
+import { Page, Document, pdfjs } from 'react-pdf';
 import Section from '../../../components/Section';
 import { container, colors } from '../../../style/theme';
 
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
-//   pdfjs.version
-// }/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
+  pdfjs.version
+}/pdf.worker.js`;
 
 const cv = '/static/cv/fatih-telis_cv.pdf';
 
 const Cv = ({ active }) => {
-  // const [scale, setScale] = useState(1);
-  // useEffect(() => {
-  //   const windowHeight = window.innerHeight;
-  //   const docHeight = 840;
-  //   const newScale = (windowHeight - 300) / docHeight;
-  //   setScale(newScale);
-  // }, []);
-  console.log('');
+  const [scale, setScale] = useState(1);
+  useEffect(() => {
+    const windowHeight = window.innerHeight;
+    const docHeight = 840;
+    const newScale = (windowHeight - 300) / docHeight;
+    setScale(newScale);
+  }, []);
   return (
     <Section active={active}>
       <Screen flexDirection="column" alignItems="center">
-        {/* <Document file={cv} loading="Loading CV...">
+        <Document file={cv} loading="Loading CV...">
           <Page pageNumber={1} scale={scale} />
-        </Document> */}
+        </Document>
         <a
           className="download"
           href={cv}
