@@ -11,7 +11,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const cv = '/static/cv/fatih-telis_cv.pdf';
 
-const CV = ({ active }) => {
+const Cv = ({ active }) => {
   const [scale, setScale] = useState(1);
   useEffect(() => {
     const windowHeight = window.innerHeight;
@@ -67,4 +67,4 @@ const Screen = styled(Flex)`
   }
 `;
 
-export default CV;
+export default Cv;

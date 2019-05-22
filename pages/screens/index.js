@@ -4,7 +4,7 @@ import { Flex } from '@rebass/grid';
 import About from './about';
 import Portfolio from './portfolio';
 import Contact from './contact';
-import CV from './cv';
+import Cv from './cv';
 import { cover } from '../../style/theme';
 
 const Screens = ({ activeScreen }) => (
@@ -12,7 +12,7 @@ const Screens = ({ activeScreen }) => (
     <About active={activeScreen === 'about'} />
     <Portfolio active={activeScreen === 'portfolio'} />
     <Contact active={activeScreen === 'contact'} />
-    <CV active={activeScreen === 'cv'} />
+    <Cv active={activeScreen === 'cv'} />
   </ScreenWrapper>
 );
 
