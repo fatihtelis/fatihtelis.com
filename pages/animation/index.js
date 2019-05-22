@@ -25,7 +25,7 @@ const colors = {
   background: new THREE.Color(0xf5f7fa),
 };
 
-class BackgroundAnimation extends React.Component {
+class Animation extends React.Component {
   state = {
     activeScreen: this.props.activeScreen,
   };
@@ -240,4 +240,4 @@ class BackgroundAnimation extends React.Component {
   }
 }
 
-export default BackgroundAnimation;
+export default Animation;

@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import Layout from '../layout';
 import Screens from './screens';
-import BackgroundAnimation from '../components/BackgroundAnimation';
+import Animation from './animation';
 import { media, Container } from '../style/theme';
 
 const screens = ['about', 'portfolio', 'contact', 'cv'];
@@ -49,7 +49,7 @@ const Home = () => {
         </Container>
       </Navigation>
       <Main>
-        <BackgroundAnimation activeScreen={activeScreen} />
+        <Animation activeScreen={activeScreen} />
         <Screens activeScreen={activeScreen} />
       </Main>
     </Layout>
