@@ -4,7 +4,7 @@ import { Flex, Box } from '@rebass/grid';
 import cn from 'classnames';
 
 import Layout from '../layout';
-import Screens from './screens';
+// import Screens from './screens';
 import Animation from './animation';
 import { media, Container } from '../style/theme';
 
@@ -50,7 +50,7 @@ const Home = () => {
       </Navigation>
       <Main>
         <Animation activeScreen={activeScreen} />
-        <Screens activeScreen={activeScreen} />
+        {/* <Screens activeScreen={activeScreen} /> */}
       </Main>
     </Layout>
   );
