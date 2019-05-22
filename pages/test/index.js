@@ -79,8 +79,8 @@ class Animation extends React.Component {
     // scene.add(directLightRight);
 
     // Spotlight
-    const spotlight = new THREE.SpotLight(colors.spotlight, 0.5);
-    spotlight.position.set(0, 50, 0);
+    const spotlight = new THREE.SpotLight(colors.spotlight, 1);
+    spotlight.position.set(0, 35, 0);
     spotlight.castShadow = true;
     scene.add(spotlight);
 
@@ -95,13 +95,13 @@ class Animation extends React.Component {
     scene.add(earth);
 
     // Sky
-    const sky = earth.clone();
-    sky.position.set(0, 50, 0);
-    sky.material = new THREE.MeshBasicMaterial({
-      color: colors.sky,
-      side: THREE.DoubleSide,
-    });
-    scene.add(sky);
+    // const sky = earth.clone();
+    // sky.position.set(0, 50, 0);
+    // sky.material = new THREE.MeshBasicMaterial({
+    //   color: colors.sky,
+    //   side: THREE.DoubleSide,
+    // });
+    // scene.add(sky);
 
     // Cube
     const cubeGeometry = new THREE.BoxGeometry(5, 5, 5);
