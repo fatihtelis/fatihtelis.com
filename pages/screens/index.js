@@ -12,7 +12,7 @@ const Screens = ({ activeScreen }) => (
     <About active={activeScreen === 'about'} />
     {/* <Portfolio active={activeScreen === 'portfolio'} /> */}
     <Contact active={activeScreen === 'contact'} />
-    {/* <Cv active={activeScreen === 'cv'} /> */}
+    <Cv active={activeScreen === 'cv'} />
   </ScreenWrapper>
 );
 
