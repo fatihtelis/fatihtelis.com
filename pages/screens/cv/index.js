@@ -1,45 +1,34 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
-import { Page, Document, pdfjs } from 'react-pdf';
+// import { Page, Document, pdfjs } from 'react-pdf';
 import Section from '../../../components/Section';
 import { container, colors } from '../../../style/theme';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
-  pdfjs.version
-}/pdf.worker.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
+//   pdfjs.version
+// }/pdf.worker.js`;
 
 const cv = '/static/cv/fatih-telis_cv.pdf';
 
-const Cv = ({ active }) => {
-  const [scale, setScale] = useState(1);
-  useEffect(() => {
-    const windowHeight = window.innerHeight;
-    const docHeight = 840;
-    const newScale = (windowHeight - 300) / docHeight;
-    setScale(newScale);
-  }, []);
-  return (
-    <Section active={active}>
-      <Screen flexDirection="column" alignItems="center">
-        <Document file={cv} loading="Loading CV...">
-          <Page pageNumber={1} scale={scale} />
-        </Document>
-        <a
-          className="download"
-          href={cv}
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Fatih Telis CV"
-        >
-          <div>Download CV</div>
-          <span className="bx bx-download" />
-        </a>
-      </Screen>
-    </Section>
-  );
-};
-
+const Cv = ({ active }) => (
+  <Section active={active}>
+    <Screen flexDirection="column" alignItems="center">
+      {/* <Document file={cv} loading="Loading CV..." height={360}>
+          <Page pageNumber={1} />
+        </Document> */}
+      <a
+        className="download"
+        href={cv}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Fatih Telis CV"
+      >
+        <div>Download CV</div>
+        <span className="bx bx-download" />
+      </a>
+    </Screen>
+  </Section>
+);
 const Screen = styled(Flex)`
   ${container};
   padding: 40px 0;
