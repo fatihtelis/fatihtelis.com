@@ -110,34 +110,34 @@ class Animation extends React.Component {
     });
 
     const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-    cube.position.x = -10;
+    cube.position.x = 0;
     cube.position.y = 6.5;
     cube.rotation.y = Math.PI / 4;
     cube.castShadow = true;
     scene.add(cube);
 
     // Sphere
-    const sphereGeometry = new THREE.SphereBufferGeometry(3, 24, 24);
-    const sphereMaterial = new THREE.MeshPhongMaterial({
-      color: colors.sphere,
-    });
-
-    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-    sphere.position.y = 6.5;
-    sphere.castShadow = true;
-    scene.add(sphere);
+    // const sphereGeometry = new THREE.SphereBufferGeometry(3, 24, 24);
+    // const sphereMaterial = new THREE.MeshPhongMaterial({
+    //   color: colors.sphere,
+    // });
+    //
+    // const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    // sphere.position.y = 6.5;
+    // sphere.castShadow = true;
+    // scene.add(sphere);
 
     // Prism
-    const prismGeometry = new THREE.ConeBufferGeometry(4, 5, 6);
-    const prismMaterial = new THREE.MeshPhongMaterial({
-      color: colors.prism,
-    });
-
-    const prism = new THREE.Mesh(prismGeometry, prismMaterial);
-    prism.position.x = 10;
-    prism.position.y = 6.5;
-    prism.castShadow = true;
-    scene.add(prism);
+    // const prismGeometry = new THREE.ConeBufferGeometry(4, 5, 6);
+    // const prismMaterial = new THREE.MeshPhongMaterial({
+    //   color: colors.prism,
+    // });
+    //
+    // const prism = new THREE.Mesh(prismGeometry, prismMaterial);
+    // prism.position.x = 10;
+    // prism.position.y = 6.5;
+    // prism.castShadow = true;
+    // scene.add(prism);
 
     // Orbit Controls
     // const controls = new OrbitControls(camera, this.canvas);
@@ -147,8 +147,8 @@ class Animation extends React.Component {
       requestAnimationFrame(renderCanvas);
 
       cube.rotation.y += 0.01;
-      sphere.rotation.y += 0.01;
-      prism.rotation.y += 0.01;
+      // sphere.rotation.y += 0.01;
+      // prism.rotation.y += 0.01;
 
       // switch (activeScreen) {
       //   case 'about':
