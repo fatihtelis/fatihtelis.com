@@ -4,7 +4,7 @@ import { Flex } from '@rebass/grid';
 import About from './about';
 // import Portfolio from './portfolio';
 import Contact from './contact';
-// import Cv from './cv';
+import Cv from './cv';
 import { cover } from '../../style/theme';
 
 const Screens = ({ activeScreen }) => (
