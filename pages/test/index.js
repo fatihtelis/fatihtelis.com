@@ -52,7 +52,7 @@ class Animation extends React.Component {
 
     // Setting Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.shadowMap.enabled = true;
+    // renderer.shadowMap.enabled = true;
     // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     // renderer.gammaInput = true;
     // renderer.gammaOutput = true;
@@ -85,14 +85,14 @@ class Animation extends React.Component {
     scene.add(spotlight);
 
     // Earth
-    const earthGeometry = new THREE.PlaneGeometry(2000, 2000);
-    const earthMaterial = new THREE.ShadowMaterial();
-    earthMaterial.opacity = 0.025;
-    const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-    earth.position.set(0, 0, 0);
-    earth.rotation.x = -Math.PI * 0.5;
-    earth.receiveShadow = true;
-    scene.add(earth);
+    // const earthGeometry = new THREE.PlaneGeometry(2000, 2000);
+    // const earthMaterial = new THREE.ShadowMaterial();
+    // earthMaterial.opacity = 0.025;
+    // const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+    // earth.position.set(0, 0, 0);
+    // earth.rotation.x = -Math.PI * 0.5;
+    // earth.receiveShadow = true;
+    // scene.add(earth);
 
     // Sky
     // const sky = earth.clone();
@@ -105,7 +105,7 @@ class Animation extends React.Component {
 
     // Cube
     const cubeGeometry = new THREE.BoxGeometry(5, 5, 5);
-    const cubeMaterial = new THREE.MeshPhongMaterial({
+    const cubeMaterial = new THREE.MeshLambertMaterial({
       color: colors.cube,
     });
 
