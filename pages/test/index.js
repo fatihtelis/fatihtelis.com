@@ -57,7 +57,6 @@ class Animation extends React.Component {
     // Setting Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.shadowMap.enabled = true;
-    if (!isMobile) renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.gammaInput = true;
     renderer.gammaOutput = true;
     renderer.setPixelRatio(window.devicePixelRatio);
