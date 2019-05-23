@@ -124,7 +124,7 @@ class Animation extends React.Component {
     scene.add(cube);
 
     // Sphere
-    const sphereGeometry = new THREE.SphereBufferGeometry(3, 24, 24);
+    const sphereGeometry = new THREE.SphereBufferGeometry(3, 12, 12);
     const sphereMaterial = isMobile
       ? new THREE.MeshLambertMaterial({
         color: colors.sphere,

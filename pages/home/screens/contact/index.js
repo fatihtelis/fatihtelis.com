@@ -4,7 +4,7 @@ import { Flex } from '@rebass/grid';
 import { TimelineMax, Elastic } from 'gsap';
 import Section from '../../../../components/Section';
 import contact from './contact.json';
-import { container } from '../../../../style/theme';
+import { container, media } from '../../../../style/theme';
 
 let animation;
 const Contact = ({ active }) => {
@@ -66,6 +66,9 @@ const Screen = styled(Flex)`
     margin-bottom: 15px;
     width: 100%;
     text-align: center;
+    ${media.phone`
+      font-size: 20px;
+    `};
   }
   a {
     position: relative;
@@ -74,6 +77,9 @@ const Screen = styled(Flex)`
     font-size: 36px;
     color: white;
     margin: 0 10px;
+    ${media.phone`
+      font-size: 30px;
+    `};
   }
 `;
 
