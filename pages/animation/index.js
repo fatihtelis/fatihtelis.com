@@ -30,7 +30,7 @@ class Animation extends React.Component {
     activeScreen: this.props.activeScreen,
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.startAnimation();
   }
 
