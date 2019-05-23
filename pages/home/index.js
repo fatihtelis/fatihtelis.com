@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
 import cn from 'classnames';
 
-import Layout from '../layout';
+import Layout from '../../layout';
 import Screens from './screens';
 import Animation from './animation';
-import { media, Container } from '../style/theme';
+import { media, Container } from '../../style/theme';
 
 const screens = ['about', 'portfolio', 'contact', 'cv'];
 

@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
 import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
-import Section from '../../../components/Section';
-import PortfolioItem from '../../../components/PortfolioItem';
+import Section from '../../../../components/Section';
+import PortfolioItem from '../../../../components/PortfolioItem';
 import portfolio from './portfolio.json';
-import { container, media } from '../../../style/theme';
+import { container, media } from '../../../../style/theme';
 
 const imageSwiperParams = {
   containerClass: 'image-swiper',

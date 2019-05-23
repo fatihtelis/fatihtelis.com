@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import { TimelineMax, Elastic } from 'gsap';
-import Section from '../../../components/Section';
+import Section from '../../../../components/Section';
 import contact from './contact.json';
-import { container } from '../../../style/theme';
+import { container } from '../../../../style/theme';
 
 let animation;
 const Contact = ({ active }) => {

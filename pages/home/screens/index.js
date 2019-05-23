@@ -5,7 +5,7 @@ import About from './about';
 import Portfolio from './portfolio';
 import Contact from './contact';
 import Cv from './cv';
-import { cover } from '../../style/theme';
+import { cover } from '../../../style/theme';
 
 const Screens = ({ activeScreen }) => (
   <ScreenWrapper justiftContent="center" alignItems="center" flexDirection="column">

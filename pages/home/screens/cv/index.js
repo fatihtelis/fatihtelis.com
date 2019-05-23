@@ -1,21 +1,14 @@
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
-// import { Page, Document, pdfjs } from 'react-pdf';
-import Section from '../../../components/Section';
-import { container, colors } from '../../../style/theme';
 
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${
-//   pdfjs.version
-// }/pdf.worker.js`;
+import Section from '../../../../components/Section';
+import { container, colors } from '../../../../style/theme';
 
 const cv = '/static/cv/fatih-telis_cv.pdf';
 
 const Cv = ({ active }) => (
   <Section active={active}>
     <Screen flexDirection="column" alignItems="center">
-      {/* <Document file={cv} loading="Loading CV..." height={360}>
-          <Page pageNumber={1} />
-        </Document> */}
       <a
         className="download"
         href={cv}

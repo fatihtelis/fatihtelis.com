@@ -2,10 +2,10 @@ import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import { TimelineMax, Power1 } from 'gsap';
-import Section from '../../../components/Section';
-import AboutItem from '../../../components/AboutItem';
+import Section from '../../../../components/Section';
+import AboutItem from '../../../../components/AboutItem';
 import about from './about.json';
-import { container, media } from '../../../style/theme';
+import { container, media } from '../../../../style/theme';
 
 let animation;
 const About = ({ active }) => {
