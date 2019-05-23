@@ -16,7 +16,7 @@ const Head = ({
     <link rel="manifest" href="/static/manifest.json" />
     <link rel="icon" sizes="192x192" href="/static/icons/icon-192x192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/static/icon-180x180.png" />
-    <link rel="icon" href="/static/favicon.ico" />
+    <link rel="icon" href="/static/favicon.ico?v=2" />
     <meta name="theme-color" content="#f5f7fa" />
     <meta property="og:url" content={url || defaultOGURL} />
     <meta property="og:title" content={title || ''} />
