@@ -105,6 +105,9 @@ const Screen = styled(Flex)`
     ${media.phone`
       padding: 20px 0 50px;
     `};
+    .swiper-slide {
+      height: auto;
+    }
     .swiper-pagination {
       left: 50px;
       width: calc(100% - 100px);
