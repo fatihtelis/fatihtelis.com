@@ -1,43 +1,61 @@
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
-import { colors, media } from '../style/theme';
+import { colors } from '../style/theme';
 
-const AboutItem = ({ innerRef, data: { icon, text } }) => (
-  <Outer ref={innerRef} className="about-item" alignItems="center">
+const AboutItem = ({
+  innerRef, data: { icon, text }, index, total,
+}) => (
+  <Outer
+    ref={innerRef}
+    className="about-item"
+    justifyContent="center"
+    alignItems="center"
+    flexDirection="column"
+  >
     <Box className={`bx ${icon}`} />
-    <Box className="text">{text}</Box>
+    <Flex className="text" alignItems="center">
+      {text}
+    </Flex>
+    <Flex className="fraction" alignItems="flex-end" aria-hidden="true">
+      <Box className="index">{index}</Box>
+      <Box>/</Box>
+      <Box className="total">{total}</Box>
+    </Flex>
   </Outer>
 );
 
 const Outer = styled(Flex)`
   background-color: white;
   border-radius: 4px;
-  height: 100px;
+  height: 100%;
   color: ${colors.font};
-  ${media.tablet`
-    height: auto;
-  `};
-  .text {
-    padding: 20px;
-    ${media.tablet`
-      padding: 15px 20px;
-    `};
-  }
+  position: relative;
   .bx {
-    width: 100px;
+    width: 100%;
     min-width: 100px;
-    height: 100px;
-    line-height: 100px;
-    border-right: 1px solid #eee;
+    height: 75px;
+    line-height: 75px;
     font-size: 42px;
     text-align: center;
-    ${media.tablet`
-      height: auto;
-      line-height: auto;
-      width: 60px;
-      min-width: 60px;
-      font-size: 36px;
-    `};
+    border-bottom: 1px solid #eee;
+  }
+  .text {
+    height: calc(100% - 75px);
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .fraction {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ddd;
+    font-weight: 300;
+    .index {
+      font-size: 21px;
+    }
+    .total {
+      font-size: 12px;
+    }
   }
 `;
 

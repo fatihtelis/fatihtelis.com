@@ -2,23 +2,53 @@ import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
 import { TimelineMax, Power1 } from 'gsap';
+import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
 import Section from '../../../../components/Section';
 import AboutItem from '../../../../components/AboutItem';
 import about from './about.json';
 import { container, media } from '../../../../style/theme';
 
+const params = {
+  containerClass: 'about-swiper',
+  slidesPerView: 3,
+  spaceBetween: 20,
+  speed: 700,
+  grabCursor: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '.prev.bx.bx-chevron-left',
+    nextEl: '.next.bx.bx-chevron-right',
+  },
+  breakpoints: {
+    600: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    1023: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
+};
+
 let animation;
+
 const About = ({ active }) => {
   const items = Array.from({ length: about.length }, () => useRef(null));
+
   const animate = () => {
-    animation = new TimelineMax({ paused: true }).staggerTo(
+    animation = new TimelineMax({ paused: true }).staggerFrom(
       items.map(i => i.current),
-      0.3,
+      0.4,
       {
+        bottom: -400,
         opacity: 1,
-        bottom: 0,
         ease: Power1.easeInOut,
-        delay: 0.5,
+        delay: 0.4,
       },
       0.05,
     );
@@ -40,11 +70,18 @@ const About = ({ active }) => {
     <Section active={active}>
       <Screen flexDirection="column" alignItems="center">
         <h2>Who Am I?</h2>
-        <Flex className="about" flexWrap="wrap">
+        <Swiper {...params}>
           {about.map((item, index) => (
-            <AboutItem innerRef={items[index]} data={item} key={item.text} />
+            <div className="slide" key={item.text}>
+              <AboutItem
+                innerRef={items[index]}
+                data={item}
+                index={index + 1}
+                total={about.length}
+              />
+            </div>
           ))}
-        </Flex>
+        </Swiper>
       </Screen>
     </Section>
   );
@@ -55,101 +92,52 @@ const Screen = styled(Flex)`
   h2 {
     font-size: 36px;
     text-align: center;
-    margin: 0px auto 40px;
-    ${media.tablet`
-        margin: 0px auto 20px;
-      `};
+    margin: 0px auto;
+    ${media.phone`
+      font-size: 24px;
+    `};
   }
-  .about {
-    position: relative;
+  .about-swiper {
     width: 100%;
-    max-width: 1000px;
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: calc(100% + 40px);
-      left: 50%;
-      border-left: 1px dashed white;
-      ${media.tablet`
-          left: 0;
-        `};
+    overflow: hidden;
+    position: relative;
+    padding: 30px 0 50px;
+    ${media.phone`
+      padding: 20px 0 50px;
+    `};
+    .swiper-pagination {
+      left: 50px;
+      width: calc(100% - 100px);
+      .swiper-pagination-bullet {
+        background-color: white;
+        border-radius: 4px;
+        transition: 0.7s;
+        &.swiper-pagination-bullet-active {
+          width: 24px;
+        }
+      }
     }
-    .about-item {
-      width: calc(50% - 40px);
-      position: relative;
-      opacity: 0;
-      bottom: -100px;
-      ${media.tablet`
-          width: 100%;
-        `};
-      &:nth-child(2n) {
-        margin: 100px 0 0 40px;
-        ${media.tablet`
-            margin: 20px 0 0 20px;
-          `};
-        &:before {
-          content: '';
-          position: absolute;
-          right: 100%;
-          top: 50%;
-          width: 35px;
-          height: 1px;
-          background-color: white;
-          ${media.tablet`
-              width: 15px;
-            `};
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          left: -40px;
-          top: 50%;
-          width: 10px;
-          height: 10px;
-          background-color: white;
-          border-radius: 50%;
-          transform: translate(-50%, -50%);
-          ${media.tablet`
-              left: -20px;
-            `};
-        }
+    .prev,
+    .next {
+      position: absolute;
+      bottom: -5px;
+      color: white;
+      width: 50px;
+      font-size: 48px;
+      z-index: 1;
+      &.swiper-button-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+        cursor: not-allowed;
       }
-      &:nth-child(2n + 1) {
-        margin: 0 40px 0 0;
-        ${media.tablet`
-            margin: 20px 0 0 20px;
-          `};
-        &:before {
-          content: '';
-          position: absolute;
-          left: 100%;
-          top: 50%;
-          width: 35px;
-          height: 1px;
-          background-color: white;
-          ${media.tablet`
-              width: 15px;
-              right: 100%;
-              left: unset;
-            `};
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          right: -40px;
-          top: 50%;
-          width: 10px;
-          height: 10px;
-          background-color: white;
-          border-radius: 50%;
-          transform: translate(50%, -50%);
-          ${media.tablet`
-              left: -30px;
-              right: unset;
-            `};
-        }
-      }
+    }
+    .prev {
+      left: -15px;
+      text-align: left;
+    }
+    .next {
+      right: -15px;
+      text-align: right;
     }
   }
 `;

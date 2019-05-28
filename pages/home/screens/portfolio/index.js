@@ -51,8 +51,8 @@ const infoSwiperParams = {
 };
 
 const Portfolio = ({ active }) => {
-  const [imageSwiper, updateImageSwiper] = useState(null);
-  const [infoSwiper, updateInfoSwiper] = useState(null);
+  const [imageSwiper, setImageSwiper] = useState(null);
+  const [infoSwiper, setInfoSwiper] = useState(null);
   useEffect(() => {
     if (imageSwiper) imageSwiper.init();
     if (infoSwiper) infoSwiper.init();
@@ -65,7 +65,7 @@ const Portfolio = ({ active }) => {
   return (
     <Section active={active}>
       <Screen className="screen" flexDirection="column" justifyContent="center">
-        <Swiper getSwiper={updateImageSwiper} {...imageSwiperParams}>
+        <Swiper getSwiper={setImageSwiper} {...imageSwiperParams}>
           {portfolio.map(item => (
             <div className="slide" key={`${item.images.desktop}-${item.images.mobile}`}>
               <PortfolioItem.Image data={item} />
@@ -73,7 +73,7 @@ const Portfolio = ({ active }) => {
           ))}
         </Swiper>
         <Swiper
-          getSwiper={updateInfoSwiper}
+          getSwiper={setInfoSwiper}
           {...infoSwiperParams}
           renderPrevButton={() => (
             <Flex className="prev" alignItems="center">
