@@ -29,96 +29,19 @@ const colors = {
 const Animation = ({ activeScreen }) => {
   const active = useRef(activeScreen);
   const canvas = useRef(null);
-  let cube;
-  let sphere;
-  let prism;
-  let camera;
-  let renderer;
-  let scene;
-
-  const renderCanvas = () => {
-    requestAnimationFrame(renderCanvas);
-
-    cube.rotation.y += 0.01;
-    sphere.rotation.y += 0.01;
-    prism.rotation.y += 0.01;
-    switch (active.current) {
-      case 'about':
-        if (cube.position.z < 21) {
-          cube.position.x += 0.36;
-          cube.position.z += 0.75;
-          cube.rotation.x -= 0.15;
-          cube.rotation.z += 0.1;
-        } else {
-          cube.rotation.x = 0;
-          cube.rotation.y = 0;
-          cube.rotation.z = 0;
-        }
-        break;
-      case 'portfolio':
-        if (sphere.position.z < 21) {
-          sphere.position.y -= 0.05;
-          sphere.position.z += 0.75;
-          sphere.rotation.x -= 0.15;
-          sphere.rotation.z += 0.1;
-        } else {
-          sphere.rotation.x = 0;
-          sphere.rotation.y = 0;
-          sphere.rotation.z = 0;
-        }
-        break;
-      case 'contact':
-        if (prism.position.z < 21) {
-          prism.position.x -= 0.35;
-          prism.position.y -= 0.04;
-          prism.position.z += 0.75;
-          prism.rotation.x -= 0.05;
-        } else {
-          prism.rotation.x += 0;
-          prism.rotation.y = 0;
-        }
-        break;
-      case 'cv':
-        if (camera.rotation.x < Math.PI / 2) {
-          camera.rotation.x += 0.05;
-        }
-        break;
-      default:
-        if (cube.position.z > 0) {
-          cube.position.x -= 0.48;
-          cube.position.z -= 1;
-        }
-        if (sphere.position.z > 0) {
-          sphere.position.y += 0.06666666;
-          sphere.position.z -= 1;
-        }
-        if (prism.position.z > 0) {
-          prism.position.x += 0.46666666;
-          prism.position.y += 0.05333333;
-          prism.position.z -= 1;
-          prism.rotation.x += 0.06666666;
-        }
-        if (camera.rotation.x > 0) {
-          camera.rotation.x -= 0.1;
-        }
-        break;
-    }
-
-    renderer.render(scene, camera);
-  };
 
   const startAnimation = () => {
     // Initializing Three.js Scene
-    scene = new THREE.Scene();
+    const scene = new THREE.Scene();
 
     // Setting Camera
     const dislayRatio = window.innerWidth / window.innerHeight;
-    camera = new THREE.PerspectiveCamera(75, dislayRatio, 0.1, 50);
+    const camera = new THREE.PerspectiveCamera(75, dislayRatio, 0.1, 50);
     camera.position.y = 6;
     camera.position.z = 24;
 
     // Setting Renderer
-    renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.shadowMap.enabled = true;
     renderer.gammaInput = true;
     renderer.gammaOutput = true;
@@ -176,7 +99,7 @@ const Animation = ({ activeScreen }) => {
       color: colors.cube,
     });
 
-    cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+    const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
     cube.position.x = -10;
     cube.position.y = 6.5;
     cube.rotation.y = Math.PI / 4;
@@ -189,7 +112,7 @@ const Animation = ({ activeScreen }) => {
       color: colors.sphere,
     });
 
-    sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     sphere.position.y = 6.5;
     sphere.castShadow = true;
     scene.add(sphere);
@@ -200,7 +123,7 @@ const Animation = ({ activeScreen }) => {
       color: colors.prism,
     });
 
-    prism = new THREE.Mesh(prismGeometry, prismMaterial);
+    const prism = new THREE.Mesh(prismGeometry, prismMaterial);
     prism.position.x = 10;
     prism.position.y = 6.5;
     prism.castShadow = true;
@@ -208,6 +131,75 @@ const Animation = ({ activeScreen }) => {
 
     // Orbit Controls
     // const controls = new OrbitControls(camera, this.canvas);
+
+    const renderCanvas = () => {
+      requestAnimationFrame(renderCanvas);
+      cube.rotation.y += 0.01;
+      sphere.rotation.y += 0.01;
+      prism.rotation.y += 0.01;
+      switch (active.current) {
+        case 'about':
+          if (cube.position.z < 21) {
+            cube.position.x += 0.36;
+            cube.position.z += 0.75;
+            cube.rotation.x -= 0.15;
+            cube.rotation.z += 0.1;
+          } else {
+            cube.rotation.x = 0;
+            cube.rotation.y = 0;
+            cube.rotation.z = 0;
+          }
+          break;
+        case 'portfolio':
+          if (sphere.position.z < 21) {
+            sphere.position.y -= 0.05;
+            sphere.position.z += 0.75;
+            sphere.rotation.x -= 0.15;
+            sphere.rotation.z += 0.1;
+          } else {
+            sphere.rotation.x = 0;
+            sphere.rotation.y = 0;
+            sphere.rotation.z = 0;
+          }
+          break;
+        case 'contact':
+          if (prism.position.z < 21) {
+            prism.position.x -= 0.35;
+            prism.position.y -= 0.04;
+            prism.position.z += 0.75;
+            prism.rotation.x -= 0.05;
+          } else {
+            prism.rotation.x += 0;
+            prism.rotation.y = 0;
+          }
+          break;
+        case 'cv':
+          if (camera.rotation.x < Math.PI / 2) {
+            camera.rotation.x += 0.05;
+          }
+          break;
+        default:
+          if (cube.position.z > 0) {
+            cube.position.x -= 0.48;
+            cube.position.z -= 1;
+          }
+          if (sphere.position.z > 0) {
+            sphere.position.y += 0.06666666;
+            sphere.position.z -= 1;
+          }
+          if (prism.position.z > 0) {
+            prism.position.x += 0.46666666;
+            prism.position.y += 0.05333333;
+            prism.position.z -= 1;
+            prism.rotation.x += 0.06666666;
+          }
+          if (camera.rotation.x > 0) {
+            camera.rotation.x -= 0.1;
+          }
+          break;
+      }
+      renderer.render(scene, camera);
+    };
 
     renderCanvas();
 
