@@ -121,6 +121,7 @@ const Screen = styled(Flex)`
       letter-spacing: 2px;
       font-weight: 300;
       cursor: pointer;
+      outline: none;
       .bx {
         font-size: 12px;
       }
