@@ -5,7 +5,7 @@ export const colors = {
   font: '#2c3e50',
 };
 
-export const cover = () => 'position:absolute; top: 0; bottom: 0; left: 0; right: 0;';
+export const cover = pos => `position:${pos || 'absolute'}; top: 0; bottom: 0; left: 0; right: 0;`;
 
 const sizes = {
   giant: 1460,

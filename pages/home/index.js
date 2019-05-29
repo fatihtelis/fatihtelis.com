@@ -6,7 +6,7 @@ import cn from 'classnames';
 import Layout from '../../layout';
 import Screens from './screens';
 import Animation from './animation';
-import { media, Container } from '../../style/theme';
+import { media, cover, Container } from '../../style/theme';
 
 const screens = ['about', 'portfolio', 'contact', 'cv'];
 
@@ -180,13 +180,11 @@ const Menu = styled.ul`
 `;
 
 const Main = styled.main`
-  width: 100%;
-  height: 100vh;
+  ${cover('fixed')};
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 `;
 
 export default Home;
