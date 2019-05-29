@@ -125,6 +125,7 @@ const Screen = styled(Flex)`
       color: white;
       width: 50px;
       font-size: 48px;
+      outline: none;
       z-index: 1;
       &.swiper-button-disabled {
         opacity: 0.2;
