@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
+import cn from 'classnames';
 import { colors } from '../style/theme';
 
 const AboutItem = ({
-  innerRef, data: { icon, text }, index, total,
+  innerRef, data: { icon, title, text }, index, total,
 }) => (
   <Outer
     ref={innerRef}
@@ -12,7 +13,10 @@ const AboutItem = ({
     alignItems="center"
     flexDirection="column"
   >
-    <Box className={`bx ${icon}`} />
+    <Flex className="header" alignItems="center" justifyContent="center">
+      <Box className={cn('bx', icon)} />
+      <Box className="title">{title}</Box>
+    </Flex>
     <Flex className="text" alignItems="center">
       {text}
     </Flex>
@@ -26,18 +30,23 @@ const AboutItem = ({
 
 const Outer = styled(Flex)`
   background-color: white;
-  border-radius: 4px;
+  border-radius: 3px;
   height: 100%;
   color: ${colors.font};
   position: relative;
-  .bx {
+  .header {
     width: 100%;
-    min-width: 100px;
     height: 75px;
-    line-height: 75px;
-    font-size: 42px;
-    text-align: center;
     border-bottom: 1px solid #eee;
+    .bx {
+      font-size: 26px;
+      text-align: center;
+    }
+    .title {
+      font-size: 18px;
+      margin-left: 10px;
+      font-weight: 500;
+    }
   }
   .text {
     height: calc(100% - 75px);
@@ -46,12 +55,12 @@ const Outer = styled(Flex)`
   }
   .fraction {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     color: #ddd;
     font-weight: 300;
     .index {
-      font-size: 21px;
+      font-size: 18px;
     }
     .total {
       font-size: 12px;

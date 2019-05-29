@@ -15,7 +15,7 @@ const Cv = ({ active }) => (
           href={cv}
           target="_blank"
           rel="noopener noreferrer"
-          title="Fatih Telis CV"
+          title="Fatih Telis CV View"
         >
           <span className="bx bx-show-alt" />
           <div>view</div>
@@ -25,7 +25,7 @@ const Cv = ({ active }) => (
           href={cv}
           target="_blank"
           rel="noopener noreferrer"
-          title="Fatih Telis CV"
+          title="Fatih Telis CV Download"
           download
         >
           <span className="bx bx-download" />
@@ -57,7 +57,7 @@ const Screen = styled(Flex)`
       margin: 0 20px;
       &:hover {
         background-color: #f5f5f5;
-        transform: translateY(-3px);
+        transform: translateY(-5px);
       }
       .bx {
         font-size: 48px;

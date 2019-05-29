@@ -94,6 +94,9 @@ const Animation = ({ activeScreen }) => {
     });
     scene.add(sky);
 
+    // Distance to Center
+    const distanceToCenter = isMobile.current ? 7 : 10;
+
     // Cube
     const cubeGeometry = isMobile.current
       ? new THREE.BoxGeometry(4, 4, 4)
@@ -103,7 +106,7 @@ const Animation = ({ activeScreen }) => {
     });
 
     const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-    cube.position.x = isMobile.current ? -7 : -10;
+    cube.position.x = -distanceToCenter;
     cube.position.y = 6.5;
     cube.rotation.y = Math.PI / 4;
     cube.castShadow = true;
@@ -131,7 +134,7 @@ const Animation = ({ activeScreen }) => {
     });
 
     const prism = new THREE.Mesh(prismGeometry, prismMaterial);
-    prism.position.x = isMobile.current ? 7 : 10;
+    prism.position.x = distanceToCenter;
     prism.position.y = 6.5;
     prism.castShadow = true;
     scene.add(prism);
@@ -141,73 +144,77 @@ const Animation = ({ activeScreen }) => {
 
     const renderCanvas = () => {
       requestAnimationFrame(renderCanvas);
-      cube.rotation.y += 0.01;
-      sphere.rotation.y += 0.01;
-      prism.rotation.y += 0.01;
+
+      const standByRotation = 0.01;
+
+      [cube, sphere, prism].forEach((mesh) => {
+        mesh.rotation.y += standByRotation;
+      });
 
       const setParams = (desktop, mobile) => {
         if (isMobile.current) return mobile;
         return desktop;
       };
 
+      // Animation Parameters
+      const limit = camera.position.z - 3;
+      const zVelocity = 0.75;
+      const xVelocity = (zVelocity * distanceToCenter) / limit;
+      const reverseMultiplier = 4 / 3;
+
       switch (active.current) {
         case 'about':
-          if (cube.position.z < 21) {
-            cube.position.x += setParams(0.36, 0.252);
-            cube.position.z += 0.75;
-            cube.rotation.x -= 0.15;
+          if (cube.position.z < limit) {
+            cube.position.z += zVelocity;
+            cube.position.x += xVelocity;
+            cube.rotation.x -= 0.1;
             cube.rotation.z += 0.1;
           } else {
-            cube.rotation.x = 0;
-            cube.rotation.y = 0;
-            cube.rotation.z = 0;
+            ['x', 'y', 'z'].forEach((axis) => {
+              cube.rotation[axis] = 0;
+            });
           }
           break;
         case 'portfolio':
-          if (sphere.position.z < 21) {
+          if (sphere.position.z < limit) {
+            sphere.position.z += zVelocity;
             sphere.position.y -= setParams(0.05, 0.03);
-            sphere.position.z += 0.75;
-            sphere.rotation.x -= 0.15;
-            sphere.rotation.z += 0.1;
-          } else {
-            sphere.rotation.x = 0;
-            sphere.rotation.y = 0;
-            sphere.rotation.z = 0;
           }
           break;
         case 'contact':
-          if (prism.position.z < 21) {
-            prism.position.x -= setParams(0.35, 0.245);
+          if (prism.position.z < limit) {
+            prism.position.z += zVelocity;
+            prism.position.x -= xVelocity;
             prism.position.y -= 0.04;
-            prism.position.z += 0.75;
             prism.rotation.x -= 0.05;
           } else {
-            prism.rotation.x += 0;
             prism.rotation.y = 0;
           }
           break;
         case 'cv':
           if (camera.rotation.x < Math.PI / 2) {
-            camera.rotation.x += 0.05;
+            camera.rotation.x += 0.04;
           }
           break;
+
+        // Reverse Animation
         default:
           if (cube.position.z > 0) {
-            cube.position.x -= setParams(0.48, 0.336);
-            cube.position.z -= 1;
+            cube.position.z -= reverseMultiplier * zVelocity;
+            cube.position.x -= reverseMultiplier * xVelocity;
           }
           if (sphere.position.z > 0) {
-            sphere.position.y += setParams(0.06666666, 0.03999999);
-            sphere.position.z -= 1;
+            sphere.position.z -= reverseMultiplier * zVelocity;
+            sphere.position.y += reverseMultiplier * setParams(0.05, 0.03);
           }
           if (prism.position.z > 0) {
-            prism.position.x += setParams(0.46666666, 0.32666666);
-            prism.position.y += 0.05333333;
-            prism.position.z -= 1;
-            prism.rotation.x += 0.06666666;
+            prism.position.z -= reverseMultiplier * zVelocity;
+            prism.position.x += reverseMultiplier * xVelocity;
+            prism.position.y += reverseMultiplier * 0.04;
+            prism.rotation.x += reverseMultiplier * 0.05;
           }
           if (camera.rotation.x > 0) {
-            camera.rotation.x -= 0.1;
+            camera.rotation.x -= 0.08;
           }
           break;
       }
@@ -232,7 +239,6 @@ const Animation = ({ activeScreen }) => {
 
   useEffect(() => {
     setIsMobile();
-    // window.addEventListener('resize', setIsMobile);
     startAnimation();
   }, []);
 
