@@ -26,11 +26,9 @@ const params = {
   breakpoints: {
     600: {
       slidesPerView: 1,
-      spaceBetween: 0,
     },
     1023: {
       slidesPerView: 2,
-      spaceBetween: 20,
     },
   },
 };
