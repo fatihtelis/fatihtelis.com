@@ -27,6 +27,7 @@ const colors = {
 };
 
 const Animation = ({ activeScreen }) => {
+  const isMobile = useRef(null);
   const active = useRef(activeScreen);
   const canvas = useRef(null);
 
@@ -94,20 +95,24 @@ const Animation = ({ activeScreen }) => {
     scene.add(sky);
 
     // Cube
-    const cubeGeometry = new THREE.BoxGeometry(5, 5, 5);
+    const cubeGeometry = isMobile.current
+      ? new THREE.BoxGeometry(4, 4, 4)
+      : new THREE.BoxGeometry(5, 5, 5);
     const cubeMaterial = new THREE.MeshPhongMaterial({
       color: colors.cube,
     });
 
     const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-    cube.position.x = -10;
+    cube.position.x = isMobile.current ? -7 : -10;
     cube.position.y = 6.5;
     cube.rotation.y = Math.PI / 4;
     cube.castShadow = true;
     scene.add(cube);
 
     // Sphere
-    const sphereGeometry = new THREE.SphereBufferGeometry(3, 24, 24);
+    const sphereGeometry = isMobile.current
+      ? new THREE.SphereBufferGeometry(2.25, 24, 24)
+      : new THREE.SphereBufferGeometry(3, 24, 24);
     const sphereMaterial = new THREE.MeshPhongMaterial({
       color: colors.sphere,
     });
@@ -118,13 +123,15 @@ const Animation = ({ activeScreen }) => {
     scene.add(sphere);
 
     // Prism
-    const prismGeometry = new THREE.ConeBufferGeometry(4, 5, 6);
+    const prismGeometry = isMobile.current
+      ? new THREE.ConeBufferGeometry(3, 4, 5)
+      : new THREE.ConeBufferGeometry(4, 5, 6);
     const prismMaterial = new THREE.MeshPhongMaterial({
       color: colors.prism,
     });
 
     const prism = new THREE.Mesh(prismGeometry, prismMaterial);
-    prism.position.x = 10;
+    prism.position.x = isMobile.current ? 7 : 10;
     prism.position.y = 6.5;
     prism.castShadow = true;
     scene.add(prism);
@@ -137,10 +144,16 @@ const Animation = ({ activeScreen }) => {
       cube.rotation.y += 0.01;
       sphere.rotation.y += 0.01;
       prism.rotation.y += 0.01;
+
+      const setParams = (desktop, mobile) => {
+        if (isMobile.current) return mobile;
+        return desktop;
+      };
+
       switch (active.current) {
         case 'about':
           if (cube.position.z < 21) {
-            cube.position.x += 0.36;
+            cube.position.x += setParams(0.36, 0.252);
             cube.position.z += 0.75;
             cube.rotation.x -= 0.15;
             cube.rotation.z += 0.1;
@@ -152,7 +165,7 @@ const Animation = ({ activeScreen }) => {
           break;
         case 'portfolio':
           if (sphere.position.z < 21) {
-            sphere.position.y -= 0.05;
+            sphere.position.y -= setParams(0.05, 0.03);
             sphere.position.z += 0.75;
             sphere.rotation.x -= 0.15;
             sphere.rotation.z += 0.1;
@@ -164,7 +177,7 @@ const Animation = ({ activeScreen }) => {
           break;
         case 'contact':
           if (prism.position.z < 21) {
-            prism.position.x -= 0.35;
+            prism.position.x -= setParams(0.35, 0.245);
             prism.position.y -= 0.04;
             prism.position.z += 0.75;
             prism.rotation.x -= 0.05;
@@ -180,15 +193,15 @@ const Animation = ({ activeScreen }) => {
           break;
         default:
           if (cube.position.z > 0) {
-            cube.position.x -= 0.48;
+            cube.position.x -= setParams(0.48, 0.336);
             cube.position.z -= 1;
           }
           if (sphere.position.z > 0) {
-            sphere.position.y += 0.06666666;
+            sphere.position.y += setParams(0.06666666, 0.03999999);
             sphere.position.z -= 1;
           }
           if (prism.position.z > 0) {
-            prism.position.x += 0.46666666;
+            prism.position.x += setParams(0.46666666, 0.32666666);
             prism.position.y += 0.05333333;
             prism.position.z -= 1;
             prism.rotation.x += 0.06666666;
@@ -203,19 +216,23 @@ const Animation = ({ activeScreen }) => {
 
     renderCanvas();
 
+    const handleAnimationOnResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
     // Event Listener for Resize
-    window.addEventListener(
-      'resize',
-      () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      },
-      false,
-    );
+    window.addEventListener('resize', handleAnimationOnResize);
+  };
+
+  const setIsMobile = () => {
+    isMobile.current = !(window.innerWidth > 768);
   };
 
   useEffect(() => {
+    setIsMobile();
+    // window.addEventListener('resize', setIsMobile);
     startAnimation();
   }, []);
 
