@@ -55,7 +55,7 @@ const Outer = styled(Flex)`
   }
   .fraction {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
     color: #ddd;
     font-weight: 300;
