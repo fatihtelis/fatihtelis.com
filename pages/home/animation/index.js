@@ -76,7 +76,7 @@ const Animation = ({ activeScreen }) => {
     scene.add(spotlight);
 
     // Earth
-    const earthGeometry = new THREE.PlaneGeometry(2000, 2000);
+    const earthGeometry = new THREE.PlaneGeometry(1000, 1000);
     const earthMaterial = new THREE.ShadowMaterial();
     earthMaterial.opacity = 0.05;
     const earth = new THREE.Mesh(earthGeometry, earthMaterial);
@@ -167,8 +167,8 @@ const Animation = ({ activeScreen }) => {
           if (cube.position.z < limit) {
             cube.position.z += zVelocity;
             cube.position.x += xVelocity;
-            cube.rotation.x -= 0.1;
-            cube.rotation.z += 0.1;
+            cube.rotation.x += 0.05;
+            cube.rotation.z += 0.05;
           } else {
             ['x', 'y', 'z'].forEach((axis) => {
               cube.rotation[axis] = 0;
