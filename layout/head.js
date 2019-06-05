@@ -27,6 +27,7 @@ const Head = ({
     <meta property="og:image" content={ogImage || defaultOGImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <script type="text/javascript" src="/static/js/metrica.js" />
   </NextHead>
 );
 
