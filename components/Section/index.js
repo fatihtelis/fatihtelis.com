@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from '@rebass/grid';
-import { cover } from '../style/theme';
+import { cover } from '../../style/theme';
 
 const Section = styled(Flex).attrs({ as: 'section' })`
   ${cover()};

@@ -1,11 +1,8 @@
-import styled from 'styled-components';
-import { Flex } from '@rebass/grid';
-
+import ScreenWrapper from './style';
 import About from './about';
 import Portfolio from './portfolio';
 import Contact from './contact';
 import Cv from './cv';
-import { cover } from '../../../style/theme';
 
 const Screens = ({ activeScreen }) => (
   <ScreenWrapper justiftContent="center" alignItems="center" flexDirection="column">
@@ -15,11 +12,5 @@ const Screens = ({ activeScreen }) => (
     <Cv active={activeScreen === 'cv'} />
   </ScreenWrapper>
 );
-
-const ScreenWrapper = styled(Flex)`
-  ${cover()};
-  margin-top: 100px;
-  z-index: 100;
-`;
 
 export default Screens;

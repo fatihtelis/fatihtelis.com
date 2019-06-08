@@ -1,16 +1,7 @@
 import { useEffect, useRef } from 'react';
-import styled from 'styled-components';
 import * as THREE from 'three';
+import Outer from './style';
 // import OrbitControls from 'three-orbitcontrols';
-
-const Outer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-`;
 
 const colors = {
   cube: new THREE.Color(0xf6c523),

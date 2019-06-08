@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { Flex, Box } from '@rebass/grid';
 import Swiper from 'react-id-swiper/lib/ReactIdSwiper.full';
+import Screen from './style';
 import Section from '../../../../components/Section';
 import PortfolioItem from '../../../../components/PortfolioItem';
 import portfolio from './portfolio.json';
-import { container, media } from '../../../../style/theme';
 
 const imageSwiperParams = {
   containerClass: 'image-swiper',
@@ -102,43 +101,5 @@ const Portfolio = ({ active }) => {
     </Section>
   );
 };
-
-const Screen = styled(Flex)`
-  ${container};
-  .image-swiper,
-  .info-swiper {
-    overflow: hidden;
-  }
-  .info-swiper {
-    padding-bottom: 50px;
-    position: relative;
-    .prev,
-    .next {
-      position: absolute;
-      bottom: 20px;
-      font-size: 14px;
-      line-height: 1;
-      letter-spacing: 2px;
-      font-weight: 300;
-      cursor: pointer;
-      outline: none;
-      .bx {
-        font-size: 12px;
-      }
-    }
-    .prev {
-      left: 18.75%;
-      ${media.tablet`
-          left: 0;
-        `};
-    }
-    .next {
-      right: 18.75%;
-      ${media.tablet`
-          right: 0;
-        `};
-    }
-  }
-`;
 
 export default Portfolio;
