@@ -32,7 +32,7 @@
     "technologies": ["React", "Next.js", "React Redux", "Chart.js"]
   },
   {
-    "title": "T.C. Ulaştırma Bakanlığı",
+    "title": "T.C. Ulaştırma ve Altyapı Bakanlığı",
     "description": "The project includes main portal of T.C. Ulaştırma Bakanlığı as well as subsites of the organization such as general directorates, regional departments and suborganizations. Main and subsites can be customized by using enviroment and theme file. With this technique, you can control different sites from one single repository.",
     "images": {
       "desktop": "/static/portfolio/uab/main.jpg",
