@@ -1,0 +1,26 @@
+{
+  "React": {
+    "logo": "/technologies/react.svg",
+    "website": "https://reactjs.org/"
+  },
+  "Next.js": {
+    "logo": "/technologies/nextjs.svg",
+    "website": "https://nextjs.org/"
+  },
+  "React Redux": {
+    "logo": "/technologies/react-redux.svg",
+    "website": "https://react-redux.js.org/"
+  },
+  "Chart.js": {
+    "logo": "/technologies/chartjs.svg",
+    "website": "https://www.chartjs.org/"
+  },
+  "jQuery": {
+    "logo": "/technologies/jquery.svg",
+    "website": "https://jquery.com/"
+  },
+  "ASP.NET": {
+    "logo": "/technologies/aspnet.svg",
+    "website": "https://dotnet.microsoft.com/apps/aspnet"
+  }
+}
