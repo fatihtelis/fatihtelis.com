@@ -12,6 +12,7 @@ module.exports = {
     'react/prop-types': 0,
     'react/jsx-filename-extension': 0,
     'react/react-in-jsx-scope': 0,
+    'react/jsx-props-no-spreading': 0,
     'class-methods-use-this': 0,
     'no-underscore-dangle': [
       'error',
