@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
+    "lint": "prettier . --write && eslint . --fix",
     "export": "next export",
     "export:gh-pages": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"fatihtelis.com\" >> out/CNAME",
     "start": "NODE_ENV=production node server.js"

@@ -4,7 +4,19 @@
     "link": "https://www.linkedin.com/in/fatih-telis/",
     "title": "LinkedIn"
   },
-  { "icon": "bxl-twitter", "link": "https://twitter.com/fatihtelis", "title": "Twitter" },
-  { "icon": "bxl-github", "link": "https://github.com/fatihtelis", "title": "GitHub" },
-  { "icon": "bx-envelope", "link": "mailto:fatihtelis@gmail.com", "title": "Email" }
+  {
+    "icon": "bxl-twitter",
+    "link": "https://twitter.com/fatihtelis",
+    "title": "Twitter"
+  },
+  {
+    "icon": "bxl-github",
+    "link": "https://github.com/fatihtelis",
+    "title": "GitHub"
+  },
+  {
+    "icon": "bx-envelope",
+    "link": "mailto:fatih.telis@gmail.com",
+    "title": "Email"
+  }
 ]
