@@ -16,7 +16,6 @@
     "next-compose-plugins": "^2.2.0",
     "next-fonts": "^0.17.0",
     "next-offline": "^4.0.0",
-    "next-routes": "^1.4.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-id-swiper": "^2.1.2",
