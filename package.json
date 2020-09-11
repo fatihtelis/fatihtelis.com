@@ -38,5 +38,11 @@
     "eslint-plugin-react": "^7.20.6",
     "prettier-eslint": "^11.0.0"
   },
+  "resolutions": {
+    "elliptic": "^6.5.3",
+    "set-value": "^2.0.1",
+    "node-fetch": "^2.6.1",
+    "kind-of": "^6.0.3"
+  },
   "license": "MIT"
 }
