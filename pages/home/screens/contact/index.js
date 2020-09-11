@@ -18,7 +18,7 @@ const Contact = ({ active }) => {
         ease: Elastic.easeOut,
         delay: 0.6,
       },
-      0.25,
+      0.25
     );
   };
 

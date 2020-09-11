@@ -46,7 +46,7 @@ const About = ({ active }) => {
         ease: Power1.easeInOut,
         delay: 0.4,
       },
-      0.05,
+      0.05
     );
   };
 

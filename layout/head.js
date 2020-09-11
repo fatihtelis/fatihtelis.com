@@ -4,9 +4,7 @@ const defaultDescription = '';
 const defaultOGURL = '';
 const defaultOGImage = '';
 
-const Head = ({
-  title, description, url, ogImage,
-}) => (
+const Head = ({ title, description, url, ogImage }) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>{title || ''}</title>

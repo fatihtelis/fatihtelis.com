@@ -138,7 +138,7 @@ const Animation = ({ activeScreen }) => {
 
       const standByRotation = 0.01;
 
-      [cube, sphere, prism].forEach((mesh) => {
+      [cube, sphere, prism].forEach(mesh => {
         mesh.rotation.y += standByRotation;
       });
 
@@ -161,7 +161,7 @@ const Animation = ({ activeScreen }) => {
             cube.rotation.x += 0.05;
             cube.rotation.z += 0.05;
           } else {
-            ['x', 'y', 'z'].forEach((axis) => {
+            ['x', 'y', 'z'].forEach(axis => {
               cube.rotation[axis] = 0;
             });
           }

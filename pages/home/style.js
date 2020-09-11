@@ -133,6 +133,4 @@ const Main = styled.main`
   align-items: center;
 `;
 
-export {
-  Navigation, Logo, Menu, Main,
-};
+export { Navigation, Logo, Menu, Main };

@@ -8,7 +8,7 @@ module.exports = withPlugins([css, fonts, offline], {
   exportPathMap: () => ({
     '/': { page: '/home' },
   }),
-  webpack: (config) => {
+  webpack: config => {
     config.node = {
       fs: 'empty',
     };

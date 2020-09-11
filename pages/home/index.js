@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import cn from 'classnames';
 
-import {
-  Navigation, Logo, Menu, Main,
-} from './style';
+import { Navigation, Logo, Menu, Main } from './style';
 import Layout from '../../layout';
 import Screens from './screens';
 import Animation from './animation';
@@ -38,7 +36,11 @@ const Home = () => {
                   }}
                 >
                   {screen}
-                  <i className={cn('bx', 'bx-x', { active: activeScreen === screen })} />
+                  <i
+                    className={cn('bx', 'bx-x', {
+                      active: activeScreen === screen,
+                    })}
+                  />
                 </button>
               </li>
             ))}

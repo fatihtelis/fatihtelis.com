@@ -2,9 +2,7 @@ import { Flex, Box } from '@rebass/grid';
 import cn from 'classnames';
 import Outer from './style';
 
-const AboutItem = ({
-  innerRef, data: { icon, title, text }, index, total,
-}) => (
+const AboutItem = ({ innerRef, data: { icon, title, text }, index, total }) => (
   <Outer
     ref={innerRef}
     className="about-item"

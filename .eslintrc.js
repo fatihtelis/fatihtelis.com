@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ['airbnb'],
+  extends: ['airbnb', 'prettier'],
+  plugins: ['react', 'prettier', 'import', 'jsx-a11y'],
   env: {
     browser: true,
     node: true,
