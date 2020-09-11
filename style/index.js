@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 import { colors } from './theme';
 
 import './css/normalize.min.css';
-import '../static/fonts/sofia-pro/fontstyle.css';
-import '../static/fonts/boxicons/css/boxicons.min.css';
+import '../public/fonts/sofia-pro/fontstyle.css';
+import '../public/fonts/boxicons/css/boxicons.min.css';
 import './css/swiper.min.css';
 
 const GlobalStyle = createGlobalStyle`

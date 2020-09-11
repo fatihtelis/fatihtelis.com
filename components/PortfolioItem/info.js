@@ -1,6 +1,6 @@
 import { Flex, Box } from '@rebass/grid';
 import { Info } from './style';
-import libs from '../../static/data/libs.json';
+import libs from '../../public/data/libs.json';
 
 const PortfolioInfo = ({ data: { title, description, link, technologies, screenshots } }) => (
   <Info flexDirection="column" justifyContent="space-between">

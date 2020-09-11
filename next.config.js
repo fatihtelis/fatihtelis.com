@@ -5,9 +5,6 @@ const offline = require('next-offline');
 
 module.exports = withPlugins([css, fonts, offline], {
   enableSvg: true,
-  exportPathMap: () => ({
-    '/': { page: '/home' },
-  }),
   webpack: config => {
     config.node = {
       fs: 'empty',

@@ -2,7 +2,7 @@ import { Flex } from '@rebass/grid';
 import Screen from './style';
 import Section from '../../../../components/Section';
 
-const cv = '/static/cv/fatih-telis_cv.pdf';
+const cv = '/cv/fatih-telis_cv.pdf';
 
 const Cv = ({ active }) => (
   <Section active={active}>

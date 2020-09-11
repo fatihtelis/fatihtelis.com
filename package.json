@@ -1,18 +1,18 @@
 {
   "name": "fatihtelis.com",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
     "export": "next export",
     "export:gh-pages": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"fatihtelis.com\" >> out/CNAME",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@rebass/grid": "^6.0.0-7",
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "gsap": "^2.1.2",
-    "next": "7.0.2",
+    "next": "9.5.3",
     "next-compose-plugins": "^2.2.0",
     "next-fonts": "^0.17.0",
     "next-offline": "^4.0.0",

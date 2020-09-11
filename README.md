@@ -1,4 +1,4 @@
-![Screenshot](https://raw.githubusercontent.com/fatihtelis/fatihtelis.com/master/static/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/fatihtelis/fatihtelis.com/master/public/screenshot.png)
 
 ## fatihtelis.com - Frontend Developer Portfolio Site by Fatih Telis
 

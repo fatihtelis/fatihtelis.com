@@ -13,7 +13,7 @@ const meta = {
   title: 'fatih telis | frontend developer',
   description:
     'personal website of fatih telis including info, portfolio, contact information and cv',
-  ogImage: '/static/og-image.jpg',
+  ogImage: '/og-image.jpg',
 };
 
 const Home = () => {

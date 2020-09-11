@@ -4,12 +4,12 @@
   "description": "personal website of fatih telis",
   "icons": [
     {
-      "src": "/static/icons/icon-192x192.png",
+      "src": "/icons/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/static/icons/icon-512x512.png",
+      "src": "/icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
