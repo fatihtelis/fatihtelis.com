@@ -12,7 +12,7 @@
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "gsap": "^2.1.2",
-    "next": "9.5.3",
+    "next": "9.5.4",
     "next-compose-plugins": "^2.2.0",
     "next-fonts": "^0.17.0",
     "next-offline": "^4.0.0",
