@@ -46,11 +46,11 @@ self.__precacheManifest = [
     "revision": "7f151f55e15694a31353"
   },
   {
-    "url": "/_next/static/dFB9AO-X0W4fAIHp0uSk8/_buildManifest.js",
+    "url": "/_next/static/d8SAAyroXghg-iCAMz4FA/_buildManifest.js",
     "revision": "ece81c4eb12ca158dc339f775a7a652a"
   },
   {
-    "url": "/_next/static/dFB9AO-X0W4fAIHp0uSk8/_ssgManifest.js",
+    "url": "/_next/static/d8SAAyroXghg-iCAMz4FA/_ssgManifest.js",
     "revision": "abee47769bf307639ace4945f9cfd4ff"
   },
   {
