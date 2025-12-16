@@ -6,7 +6,7 @@ on:
       - master
 
 permissions:
-  contents: write   # gh-pages'e push için şart
+  contents: write
 
 jobs:
   deploy:
@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Build & Export (same as Travis)
+      - name: Build & Export
         run: yarn export:gh-pages
 
       - name: Deploy to gh-pages
