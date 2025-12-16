@@ -1,0 +1,36 @@
+name: Deploy Next.js 9.5.3 to GitHub Pages (Legacy)
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write   # gh-pages'e push için şart
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 10
+        uses: actions/setup-node@v4
+        with:
+          node-version: 10
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build & Export (same as Travis)
+        run: yarn export:gh-pages
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
