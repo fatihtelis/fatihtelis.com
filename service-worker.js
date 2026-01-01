@@ -1,13 +1,5 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/7h_hiFxxVgNt0qYcxdwpc/_buildManifest.js",
-    "revision": "098d092d909ffc1622432d4b5b0682b2"
-  },
-  {
-    "url": "/_next/static/7h_hiFxxVgNt0qYcxdwpc/_ssgManifest.js",
-    "revision": "abee47769bf307639ace4945f9cfd4ff"
-  },
-  {
     "url": "/_next/static/chunks/2659b86927a56407e222f24dae13aa78902f80a4.82c7612fddea6a9215a8.js",
     "revision": "965a5e9c1fe8b7a0339c"
   },
@@ -51,7 +43,7 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/pages/games/contact-598ce2c83947e7450320.js"
   },
   {
-    "url": "/_next/static/chunks/pages/games/privacy-e724eee4bf36117b19c8.js"
+    "url": "/_next/static/chunks/pages/games/privacy-ce9b1b29164da42e6a45.js"
   },
   {
     "url": "/_next/static/chunks/pages/index-aae8459b4ba05a298c88.js"
@@ -104,6 +96,14 @@ self.__precacheManifest = [
   },
   {
     "url": "/_next/static/fonts/sofia-pro-ultra-light-4bdc72d871a96c7a9bf467f5d5cff5f0.otf"
+  },
+  {
+    "url": "/_next/static/kq_15tDTQHWEIV53FpjYK/_buildManifest.js",
+    "revision": "cbaaf11f6bf039e07c3ada2f6c96f475"
+  },
+  {
+    "url": "/_next/static/kq_15tDTQHWEIV53FpjYK/_ssgManifest.js",
+    "revision": "abee47769bf307639ace4945f9cfd4ff"
   }
 ];
 
