@@ -157,9 +157,8 @@ const GamesPrivacy = () => {
             <section>
               <h2>Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us through our 
-                main website at{' '}
-                <a href="/">fatihtelis.com</a>.
+                If you have any questions about this Privacy Policy, please{' '}
+                <a href="/games/contact">contact us</a>.
               </p>
             </section>
           </div>
