@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/1xqa44XziNHV4HipLsfPB/_buildManifest.js",
-    "revision": "594a25559263e36612bd02d2bb11f80d"
+    "url": "/_next/static/7h_hiFxxVgNt0qYcxdwpc/_buildManifest.js",
+    "revision": "098d092d909ffc1622432d4b5b0682b2"
   },
   {
-    "url": "/_next/static/1xqa44XziNHV4HipLsfPB/_ssgManifest.js",
+    "url": "/_next/static/7h_hiFxxVgNt0qYcxdwpc/_ssgManifest.js",
     "revision": "abee47769bf307639ace4945f9cfd4ff"
   },
   {
@@ -51,7 +51,7 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/pages/games/contact-598ce2c83947e7450320.js"
   },
   {
-    "url": "/_next/static/chunks/pages/games/privacy-4e5f5cf80335608e59a9.js"
+    "url": "/_next/static/chunks/pages/games/privacy-e724eee4bf36117b19c8.js"
   },
   {
     "url": "/_next/static/chunks/pages/index-aae8459b4ba05a298c88.js"
