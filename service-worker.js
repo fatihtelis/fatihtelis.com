@@ -1,19 +1,27 @@
 self.__precacheManifest = [
   {
+    "url": "/_next/static/1xqa44XziNHV4HipLsfPB/_buildManifest.js",
+    "revision": "594a25559263e36612bd02d2bb11f80d"
+  },
+  {
+    "url": "/_next/static/1xqa44XziNHV4HipLsfPB/_ssgManifest.js",
+    "revision": "abee47769bf307639ace4945f9cfd4ff"
+  },
+  {
+    "url": "/_next/static/chunks/2659b86927a56407e222f24dae13aa78902f80a4.82c7612fddea6a9215a8.js",
+    "revision": "965a5e9c1fe8b7a0339c"
+  },
+  {
+    "url": "/_next/static/chunks/2659b86927a56407e222f24dae13aa78902f80a4_CSS.8f6f5b95f5e92b2c9bcd.js",
+    "revision": "7981b6ad55f4e75413eb"
+  },
+  {
     "url": "/_next/static/chunks/5ce6bf4a.4237541b6e42e5a82604.js",
     "revision": "cf48fa87dab994cc5099"
   },
   {
     "url": "/_next/static/chunks/5fcd5e32.6d33924e495300e79d86.js",
     "revision": "bb31e235d7b095da7925"
-  },
-  {
-    "url": "/_next/static/chunks/805dcaae0d3e2df0646e4f8f25293146dde7df27.57812dcf43d89fa4c7b0.js",
-    "revision": "51b63438d6f1bb21b726"
-  },
-  {
-    "url": "/_next/static/chunks/805dcaae0d3e2df0646e4f8f25293146dde7df27_CSS.8f6f5b95f5e92b2c9bcd.js",
-    "revision": "789c3ad5c8956bc0f34d"
   },
   {
     "url": "/_next/static/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.de34e989f34eb5287adf.js",
@@ -37,23 +45,26 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/pages/_error-cb6685cdcea506c8b6dd.js"
   },
   {
-    "url": "/_next/static/chunks/pages/games-afea8210e8e20381ba9a.js"
+    "url": "/_next/static/chunks/pages/games-1dd45df2d9a29227ea8a.js"
   },
   {
-    "url": "/_next/static/chunks/pages/games/privacy-04dca89a96fc1101cf5d.js"
+    "url": "/_next/static/chunks/pages/games/contact-598ce2c83947e7450320.js"
   },
   {
-    "url": "/_next/static/chunks/pages/index-e09721c372bbca77090c.js"
+    "url": "/_next/static/chunks/pages/games/privacy-4e5f5cf80335608e59a9.js"
   },
   {
-    "url": "/_next/static/chunks/polyfills-555defa4e62ba07d4446.js"
+    "url": "/_next/static/chunks/pages/index-aae8459b4ba05a298c88.js"
+  },
+  {
+    "url": "/_next/static/chunks/polyfills-e5012cf49fbb0a2642db.js"
   },
   {
     "url": "/_next/static/chunks/webpack-d7b2fb72fb7257504a38.js"
   },
   {
-    "url": "/_next/static/css/805dcaae0d3e2df0646e4f8f25293146dde7df27_CSS.05d9ece0.chunk.css",
-    "revision": "789c3ad5c8956bc0f34d"
+    "url": "/_next/static/css/2659b86927a56407e222f24dae13aa78902f80a4_CSS.05d9ece0.chunk.css",
+    "revision": "7981b6ad55f4e75413eb"
   },
   {
     "url": "/_next/static/fonts/boxicons-023b7b202fa7aa03b0bf6677017f560f.eot"
@@ -93,14 +104,6 @@ self.__precacheManifest = [
   },
   {
     "url": "/_next/static/fonts/sofia-pro-ultra-light-4bdc72d871a96c7a9bf467f5d5cff5f0.otf"
-  },
-  {
-    "url": "/_next/static/yaALgm2ev7-AeUuP2juzz/_buildManifest.js",
-    "revision": "d94c328195735bd4a613178a6bbf6edc"
-  },
-  {
-    "url": "/_next/static/yaALgm2ev7-AeUuP2juzz/_ssgManifest.js",
-    "revision": "abee47769bf307639ace4945f9cfd4ff"
   }
 ];
 
