@@ -47,18 +47,20 @@ const GamesPrivacy = () => {
 
               <h3>Advertising</h3>
               <p>
-                Our games use Google AdMob to display advertisements. AdMob may collect certain information to provide 
-                personalized ads and measure ad performance. This may include:
+                Our games use Google AdMob to display advertisements. We only use non-personalized ads, 
+                which means ads are not based on your personal interests or browsing history. AdMob may collect 
+                limited information necessary to serve ads and measure ad performance, such as:
               </p>
               <ul>
                 <li>Device identifiers (such as advertising ID)</li>
-                <li>IP address</li>
+                <li>IP address (may be used for frequency capping and fraud prevention)</li>
                 <li>Device information (model, operating system version)</li>
-                <li>App usage data</li>
-                <li>Location data (general location, not precise)</li>
+                <li>App usage data (for ad measurement purposes)</li>
               </ul>
               <p>
-                For more information about how Google uses data, please visit{' '}
+                Non-personalized ads still use contextual information (like the app you're using) but do not 
+                use your personal data or interests for ad targeting. For more information about how Google uses 
+                data, please visit{' '}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
                   Google's Privacy Policy
                 </a>.
@@ -73,6 +75,7 @@ const GamesPrivacy = () => {
                 <li>Account credentials or login information</li>
                 <li>Payment information</li>
                 <li>Precise location data</li>
+                <li>Personal interests or browsing history for ad targeting (we use non-personalized ads only)</li>
                 <li>Contact lists or other personal data from your device</li>
               </ul>
             </section>
@@ -93,9 +96,9 @@ const GamesPrivacy = () => {
               
               <h3>Google AdMob</h3>
               <p>
-                Our games use Google AdMob for advertising. AdMob's use of information is governed by 
-                Google's Privacy Policy. You can opt out of personalized advertising by adjusting your 
-                device's advertising settings.
+                Our games use Google AdMob for advertising, and we only serve non-personalized ads. 
+                This means we do not use your personal information or interests to show you targeted ads. 
+                AdMob's use of information is governed by Google's Privacy Policy.
               </p>
 
               <h3>Apple Game Center</h3>
@@ -131,16 +134,17 @@ const GamesPrivacy = () => {
               <p>You have the following rights regarding your information:</p>
               <ul>
                 <li>
-                  <strong>Opt out of personalized ads:</strong> You can disable personalized advertising 
-                  in your device's privacy settings (Settings → Privacy → Apple Advertising → Limit Ad Tracking on iOS)
-                </li>
-                <li>
                   <strong>Manage Game Center:</strong> You can enable or disable Game Center features 
                   in your device's Settings app
                 </li>
                 <li>
                   <strong>Reset Advertising ID:</strong> You can reset your device's advertising identifier 
                   at any time through your device settings
+                </li>
+                <li>
+                  <strong>Limit Ad Tracking:</strong> You can limit ad tracking in your device's privacy settings 
+                  (Settings → Privacy → Apple Advertising → Limit Ad Tracking on iOS). Note that our games 
+                  already use non-personalized ads, so this setting primarily affects other apps.
                 </li>
               </ul>
             </section>
