@@ -26,7 +26,7 @@ Block Burner combines simple controls with deep strategy. The rules are easy to 
 
 const Games = () => {
   return (
-    <Layout meta={meta}>
+    <Layout meta={meta} headerBackground="gray">
       <Navigation>
         <Container>
           <div className="logo">
@@ -53,4 +53,3 @@ const Games = () => {
 };
 
 export default Games;
-

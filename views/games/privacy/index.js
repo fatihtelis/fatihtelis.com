@@ -10,7 +10,7 @@ const meta = {
 
 const GamesPrivacy = () => {
   return (
-    <Layout meta={meta}>
+    <Layout meta={meta} headerBackground="gray">
       <Navigation>
         <Container>
           <div className="logo">
