@@ -1,19 +1,11 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/QRrYqibr06OlKLdEMBT_X/_buildManifest.js",
-    "revision": "cbaaf11f6bf039e07c3ada2f6c96f475"
+    "url": "/_next/static/LrYkFSGykIRcEele8QFbx/_buildManifest.js",
+    "revision": "466ee69f48d72e7a227effc135806a77"
   },
   {
-    "url": "/_next/static/QRrYqibr06OlKLdEMBT_X/_ssgManifest.js",
+    "url": "/_next/static/LrYkFSGykIRcEele8QFbx/_ssgManifest.js",
     "revision": "abee47769bf307639ace4945f9cfd4ff"
-  },
-  {
-    "url": "/_next/static/chunks/2659b86927a56407e222f24dae13aa78902f80a4.82c7612fddea6a9215a8.js",
-    "revision": "965a5e9c1fe8b7a0339c"
-  },
-  {
-    "url": "/_next/static/chunks/2659b86927a56407e222f24dae13aa78902f80a4_CSS.8f6f5b95f5e92b2c9bcd.js",
-    "revision": "7981b6ad55f4e75413eb"
   },
   {
     "url": "/_next/static/chunks/5ce6bf4a.4237541b6e42e5a82604.js",
@@ -22,6 +14,14 @@ self.__precacheManifest = [
   {
     "url": "/_next/static/chunks/5fcd5e32.6d33924e495300e79d86.js",
     "revision": "bb31e235d7b095da7925"
+  },
+  {
+    "url": "/_next/static/chunks/a9b3383a4973c6e6e9a19f80b2abf9531a646dfc.82c7612fddea6a9215a8.js",
+    "revision": "e42940e96b17b14ed2c5"
+  },
+  {
+    "url": "/_next/static/chunks/a9b3383a4973c6e6e9a19f80b2abf9531a646dfc_CSS.8f6f5b95f5e92b2c9bcd.js",
+    "revision": "d038a2dda390abf744fa"
   },
   {
     "url": "/_next/static/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.de34e989f34eb5287adf.js",
@@ -45,7 +45,7 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/pages/_error-cb6685cdcea506c8b6dd.js"
   },
   {
-    "url": "/_next/static/chunks/pages/games-1dd45df2d9a29227ea8a.js"
+    "url": "/_next/static/chunks/pages/games-7fa75ea1d87d47938ce3.js"
   },
   {
     "url": "/_next/static/chunks/pages/games/contact-598ce2c83947e7450320.js"
@@ -63,8 +63,8 @@ self.__precacheManifest = [
     "url": "/_next/static/chunks/webpack-d7b2fb72fb7257504a38.js"
   },
   {
-    "url": "/_next/static/css/2659b86927a56407e222f24dae13aa78902f80a4_CSS.05d9ece0.chunk.css",
-    "revision": "7981b6ad55f4e75413eb"
+    "url": "/_next/static/css/a9b3383a4973c6e6e9a19f80b2abf9531a646dfc_CSS.05d9ece0.chunk.css",
+    "revision": "d038a2dda390abf744fa"
   },
   {
     "url": "/_next/static/fonts/boxicons-023b7b202fa7aa03b0bf6677017f560f.eot"
