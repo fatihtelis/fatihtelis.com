@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/Ctf9yNZBnAg6A9ZkJdZDr/_buildManifest.js",
+    "url": "/_next/static/6AbmNVK02sRCfxHbZeDlK/_buildManifest.js",
     "revision": "67b71fc6f936d670c8f16901b10eb493"
   },
   {
-    "url": "/_next/static/Ctf9yNZBnAg6A9ZkJdZDr/_ssgManifest.js",
+    "url": "/_next/static/6AbmNVK02sRCfxHbZeDlK/_ssgManifest.js",
     "revision": "abee47769bf307639ace4945f9cfd4ff"
   },
   {
@@ -140,4 +140,4 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/^https?.*/, new workbox.strategies.NetworkFirst({ "cacheName":"offlineCache", plugins: [new workbox.expiration.Plugin({ maxEntries: 200, purgeOnQuotaError: false })] }), 'GET');
+workbox.routing.registerRoute(/^https:\/\/fatihtelis\.com\/app-ads\.txt$/, new workbox.strategies.NetworkOnly(), 'GET');
