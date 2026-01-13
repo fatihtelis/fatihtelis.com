@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "url": "/_next/static/5FI2TjE1cWi-ANz6rEcbH/_buildManifest.js",
+    "url": "/_next/static/Ctf9yNZBnAg6A9ZkJdZDr/_buildManifest.js",
     "revision": "67b71fc6f936d670c8f16901b10eb493"
   },
   {
-    "url": "/_next/static/5FI2TjE1cWi-ANz6rEcbH/_ssgManifest.js",
+    "url": "/_next/static/Ctf9yNZBnAg6A9ZkJdZDr/_ssgManifest.js",
     "revision": "abee47769bf307639ace4945f9cfd4ff"
   },
   {
