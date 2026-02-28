@@ -47,19 +47,21 @@ const GamesPrivacy = () => {
 
               <h3>Advertising</h3>
               <p>
-                Our games use Google AdMob to display advertisements. We only use non-personalized ads, 
-                which means ads are not based on your personal interests or browsing history. AdMob may collect 
-                limited information necessary to serve ads and measure ad performance, such as:
+                Our games use Google AdMob to display personalized advertisements. Personalized ads are
+                based on your interests, demographics, and other data collected by Google to provide a more
+                relevant advertising experience. AdMob may collect information to serve and personalize ads, such as:
               </p>
               <ul>
                 <li>Device identifiers (such as advertising ID)</li>
-                <li>IP address (may be used for frequency capping and fraud prevention)</li>
+                <li>IP address</li>
                 <li>Device information (model, operating system version)</li>
-                <li>App usage data (for ad measurement purposes)</li>
+                <li>App usage data</li>
+                <li>Browsing and search history (collected by Google)</li>
+                <li>Demographic and interest data</li>
               </ul>
               <p>
-                Non-personalized ads still use contextual information (like the app you're using) but do not 
-                use your personal data or interests for ad targeting. For more information about how Google uses 
+                You can opt out of personalized ads at any time by adjusting your device settings
+                (see "Your Rights and Choices" below). For more information about how Google uses
                 data, please visit{' '}
                 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
                   Google's Privacy Policy
@@ -75,7 +77,7 @@ const GamesPrivacy = () => {
                 <li>Account credentials or login information</li>
                 <li>Payment information</li>
                 <li>Precise location data</li>
-                <li>Personal interests or browsing history for ad targeting (we use non-personalized ads only)</li>
+                <li>Personal interests or browsing history directly (however, Google AdMob may use such data for personalized ads — see "Advertising" above)</li>
                 <li>Contact lists or other personal data from your device</li>
               </ul>
             </section>
@@ -96,9 +98,16 @@ const GamesPrivacy = () => {
               
               <h3>Google AdMob</h3>
               <p>
-                Our games use Google AdMob for advertising, and we only serve non-personalized ads. 
-                This means we do not use your personal information or interests to show you targeted ads. 
-                AdMob's use of information is governed by Google's Privacy Policy.
+                Our games use Google AdMob for advertising, including personalized ads. Google may use
+                information such as your advertising ID, browsing activity, and interests to serve ads
+                that are more relevant to you. AdMob's use of information is governed by{' '}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                  Google's Privacy Policy
+                </a>. You can manage your ad personalization preferences in your device settings or
+                at{' '}
+                <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">
+                  Google Ads Settings
+                </a>.
               </p>
 
               <h3>Apple Game Center</h3>
@@ -106,6 +115,15 @@ const GamesPrivacy = () => {
                 Game Center features are provided by Apple. Your use of Game Center is subject to 
                 Apple's Privacy Policy and Terms of Service. You can manage your Game Center settings 
                 in your device's Settings app.
+              </p>
+            </section>
+
+            <section>
+              <h2>Consent for Personalized Ads</h2>
+              <p>
+                Where required by applicable law (such as the EU's GDPR or Apple's App Tracking Transparency framework),
+                we will ask for your consent before serving personalized ads. If you do not provide consent or later
+                withdraw it, you will still see ads, but they will not be personalized to your interests.
               </p>
             </section>
 
@@ -142,9 +160,13 @@ const GamesPrivacy = () => {
                   at any time through your device settings
                 </li>
                 <li>
-                  <strong>Limit Ad Tracking:</strong> You can limit ad tracking in your device's privacy settings 
-                  (Settings → Privacy → Apple Advertising → Limit Ad Tracking on iOS). Note that our games 
-                  already use non-personalized ads, so this setting primarily affects other apps.
+                  <strong>Opt Out of Personalized Ads:</strong> You can opt out of personalized ads by
+                  disabling ad tracking in your device's privacy settings
+                  (Settings → Privacy & Security → Tracking on iOS), or by visiting{' '}
+                  <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">
+                    Google Ads Settings
+                  </a>{' '}
+                  to manage your ad personalization preferences
                 </li>
               </ul>
             </section>
